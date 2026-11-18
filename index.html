@@ -7,18 +7,18 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-bg {
-            background: linear-gradient(to bottom, rgba(12, 10, 9, 0.85), rgba(12, 10, 9, 0.95)), url('logo.jpg') center/cover no-repeat;
+        .hero-pattern {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.92), rgba(15, 12, 9, 0.98)), url('logo.jpg') center/cover no-repeat;
         }
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-amber-600 selection:text-white">
 
-    <!-- Header / Navigasi -->
-    <header class="sticky top-0 z-50 bg-neutral-950/90 backdrop-blur-md border-b border-amber-900/40">
+    <!-- Header / Navigasi Profesional -->
+    <header class="sticky top-0 z-50 bg-neutral-950/95 backdrop-blur-md border-b border-amber-900/40 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <img src="logo.jpg" alt="Logo BSN" class="h-10 w-10 sm:h-12 sm:w-12 object-cover rounded-xl border border-amber-500/50 shadow-md" onerror="this.style.display='none'">
+                <img src="logo.jpg" alt="Logo BSN" class="h-11 w-11 sm:h-12 sm:w-12 object-cover rounded-xl border border-amber-500/60 shadow-lg" onerror="this.style.display='none'">
                 <div>
                     <span class="text-sm sm:text-base font-bold tracking-wider text-amber-400 block leading-tight">BUMI SENI NUSANTARA</span>
                     <span class="text-[9px] sm:text-[10px] text-amber-200/60 tracking-widest uppercase">Crafting Nature Into Timeless Beauty</span>
@@ -28,22 +28,22 @@
                 <a href="#beranda" class="hover:text-amber-400 transition">Beranda</a>
                 <a href="#tentang" class="hover:text-amber-400 transition">Tentang Kami</a>
                 <a href="#layanan" class="hover:text-amber-400 transition">Layanan</a>
-                <a href="#galeri-video" class="hover:text-amber-400 transition">Galeri Video</a>
+                <a href="#galeri-karya" class="hover:text-amber-400 transition">Galeri Karya</a>
                 <a href="#kontak" class="hover:text-amber-400 transition">Kontak</a>
             </nav>
         </div>
     </header>
 
-    <!-- Beranda / Hero Section dengan Tampilan Logo Megah -->
-    <section id="beranda" class="relative hero-bg py-28 lg:py-40 text-center px-4 border-b border-amber-900/30">
-        <div class="max-w-4xl mx-auto flex flex-col items-center">
-            <!-- Menampilkan Logo Besar di Hero -->
+    <!-- Beranda / Hero Section dengan Logo Megah -->
+    <section id="beranda" class="relative hero-pattern py-28 lg:py-40 text-center px-4 border-b border-amber-900/30 overflow-hidden">
+        <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
+            <!-- Logo Utama di Hero dengan Efek Glow -->
             <div class="mb-8 relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-                <img src="logo.jpg" alt="Logo Utama BSN" class="relative h-36 w-36 sm:h-44 sm:w-44 object-cover rounded-2xl border-2 border-amber-500/50 shadow-2xl mx-auto" onerror="this.parentElement.style.display='none'">
+                <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                <img src="logo.jpg" alt="Logo Utama BSN" class="relative h-36 w-36 sm:h-44 sm:w-44 object-cover rounded-2xl border-2 border-amber-500/60 shadow-2xl mx-auto" onerror="this.parentElement.style.display='none'">
             </div>
 
-            <span class="inline-block py-1.5 px-5 rounded-full bg-amber-900/30 border border-amber-600/40 text-amber-400 text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner">Studio Kreatif Bambu & Seni Nusantara</span>
+            <span class="inline-block py-1.5 px-6 rounded-full bg-amber-900/30 border border-amber-600/40 text-amber-400 text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner">Studio Kreatif Bambu & Seni Nusantara</span>
             <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                 Membangun Ruang, <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-600">Menghidupkan Cerita</span>
             </h1>
@@ -52,8 +52,8 @@
             </p>
             <p class="text-sm tracking-widest text-amber-400 uppercase font-semibold mb-10">Crafting Nature Into Timeless Beauty</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-                <a href="#galeri-video" class="bg-amber-600 hover:bg-amber-500 text-neutral-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-amber-600/25">Lihat Galeri Video</a>
-                <a href="#kontak" class="bg-neutral-900/90 hover:bg-neutral-800 border border-amber-700/40 text-neutral-200 font-semibold px-8 py-3.5 rounded-xl transition">Hubungi Kami</a>
+                <a href="#galeri-karya" class="bg-amber-600 hover:bg-amber-500 text-neutral-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-amber-600/25">Lihat Portofolio & Galeri</a>
+                <a href="#kontak" class="bg-neutral-900 hover:bg-neutral-800 border border-amber-700/40 text-neutral-200 font-semibold px-8 py-3.5 rounded-xl transition">Hubungi Kami</a>
             </div>
         </div>
     </section>
@@ -77,7 +77,7 @@
     <!-- Visi & Misi -->
     <section class="py-20 bg-neutral-900/40 border-y border-amber-900/20 px-4">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            <div class="bg-neutral-900 p-8 rounded-2xl border border-amber-800/40 shadow-xl flex flex-col justify-between">
+            <div class="bg-neutral-900/90 p-8 rounded-2xl border border-amber-800/40 shadow-xl flex flex-col justify-between">
                 <div>
                     <h3 class="text-2xl font-bold text-amber-400 mb-4 flex items-center gap-3">
                         <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Visi Kami
@@ -87,7 +87,7 @@
                     </p>
                 </div>
             </div>
-            <div class="bg-neutral-900 p-8 rounded-2xl border border-amber-800/40 shadow-xl flex flex-col justify-between">
+            <div class="bg-neutral-900/90 p-8 rounded-2xl border border-amber-800/40 shadow-xl flex flex-col justify-between">
                 <div>
                     <h3 class="text-2xl font-bold text-amber-400 mb-4 flex items-center gap-3">
                         <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Misi Utama
@@ -166,146 +166,45 @@
         </div>
     </section>
 
-    <!-- GALERI VIDEO KARYA -->
-    <section id="galeri-video" class="py-24 bg-neutral-900/40 border-t border-amber-900/20 px-4">
+    <!-- GALERI VIDEO KARYA (11 Video Google Drive) -->
+    <section id="galeri-karya" class="py-24 bg-neutral-900/40 border-t border-amber-900/20 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-amber-500 mb-4">Galeri Karya & Dokumentasi</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-amber-500 mb-4">Galeri Dokumentasi Video</h2>
           <p class="text-lg text-neutral-400">Saksikan proses pembuatan dan keindahan detail karya seni bambu serta kayu kami.</p>
         </div>
 
         <!-- Grid Video -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          <!-- Video 1 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1YvrKpRvhgXInofXDndbU8ZCCRlOGHRJO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 01</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/1YvrKpRvhgXInofXDndbU8ZCCRlOGHRJO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 01</h3></div>
           </div>
-
-          <!-- Video 2 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/17sitzUjk6MP8Qmm7fNZFk2SjvDzdzuN8/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 02</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/17sitzUjk6MP8Qmm7fNZFk2SjvDzdzuN8/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 02</h3></div>
           </div>
-
-          <!-- Video 3 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1ImcLkeNC43dSzHKPVFEJEwz1cDusnEyS/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 03</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/1ImcLkeNC43dSzHKPVFEJEwz1cDusnEyS/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 03</h3></div>
           </div>
-
-          <!-- Video 4 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1YEoX3aGsHaP2kw4-fZzAScYBzlskBzET/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 04</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/1YEoX3aGsHaP2kw4-fZzAScYBzlskBzET/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 04</h3></div>
           </div>
-
-          <!-- Video 5 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/17Lccq7PwJsDKqfwzJm5YqIr48Nf_8vaN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 05</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/17Lccq7PwJsDKqfwzJm5YqIr48Nf_8vaN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 05</h3></div>
           </div>
-
-          <!-- Video 6 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/172TqWTHKq_HL-33A9PmQcbf7zHHK3CMN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 06</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/172TqWTHKq_HL-33A9PmQcbf7zHHK3CMN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 06</h3></div>
           </div>
-
-          <!-- Video 7 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1gXbrmolMv1uAYAXWcTYSVaMCQpL9snKe/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 07</h3>
-            </div>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/1gXbrmolMv1uAYAXWcTYSVaMCQpL9snKe/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div class="p-5"><h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 07</h3></div>
           </div>
-
-          <!-- Video 8 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1D7yujkOups0U_v2ZUEEDc7SrHcGHASLO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 08</h3>
-            </div>
-          </div>
-
-          <!-- Video 9 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1y0x4ANdMSe4BDFl6wBEvYLxv_buhTyO3/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 09</h3>
-            </div>
-          </div>
-
-          <!-- Video 10 -->
-          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30">
-            <div class="relative w-full aspect-video">
-              <iframe src="https://drive.google.com/file/d/1z16Yd2bagYxYpIA-Y-SzzySUcVs7k2NJ/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-base text-neutral-200">Dokumentasi Karya 10</h3>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer / Kontak & WhatsApp -->
-    <footer id="kontak" class="bg-neutral-950 border-t border-amber-900/30 py-20 px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl font-bold text-amber-500 mb-2">Bumi Seni Nusantara</h3>
-            <p class="text-xs tracking-widest uppercase text-amber-200/60 mb-6">Crafting Nature Into Timeless Beauty</p>
-            
-            <p class="text-neutral-300 mb-8 max-w-lg mx-auto">
-                Mari berkolaborasi mewujudkan proyek impian Anda bersama tim profesional kami.
-            </p>
-
-            <!-- Tombol Hubungi WhatsApp Founder -->
-            <div class="mb-10">
-                <a href="https://wa.me/6281234567890?text=Halo%20Bumi%20Seni%20Nusantara,%20saya%20tertarik%20dengan%20layanan%20Anda." target="_blank" class="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition gap-3">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    <span>Hubungi Founder via WhatsApp</span>
-                </a>
-            </div>
-
-            <div class="text-xs text-neutral-400 space-y-2 mb-6">
-                <p><strong class="text-neutral-200">Founder:</strong> Bumi Munandar</p>
-                <p><strong class="text-neutral-200">Co-Founder:</strong> Yosi Falentina</p>
-            </div>
-            <p class="text-xs text-neutral-600">&copy; 2026 Bumi Seni Nusantara. Hak Cipta Dilindungi.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+          <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-xl border border-amber-900/30 hover:border-amber-500/50 transition">
+            <div class="relative w-full aspect-video"><iframe src="https://drive.google.com/file/d/1D7yujkOups0U_v2ZUEEDc7SrHcGHASLO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe></div>
+            <div
