@@ -10,18 +10,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hero-pattern {
-            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.88), rgba(10, 10, 10, 0.96)), url('Logo BSN.jpg') center/cover no-repeat;
+            background: linear-gradient(to bottom, rgba(3, 3, 3, 0.85), rgba(10, 10, 10, 0.98)), url('Logo BSN.jpg') center/cover no-repeat;
         }
-        .glow-box {
-            box-shadow: 0 0 35px -10px rgba(217, 119, 6, 0.15);
+        .luxury-card {
+            background: linear-gradient(145deg, rgba(23, 23, 23, 0.9), rgba(10, 10, 10, 0.95));
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .glow-box:hover {
-            box-shadow: 0 0 45px -5px rgba(217, 119, 6, 0.3);
+        .luxury-card:hover {
+            border-color: rgba(245, 158, 11, 0.6);
+            box-shadow: 0 20px 40px -15px rgba(217, 119, 6, 0.25);
+            transform: translateY(-4px);
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #d97706; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #030303; }
+        ::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d97706; }
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-amber-600 selection:text-white">
@@ -33,13 +39,13 @@
     </a>
 
     <!-- Header / Navigasi Profesional -->
-    <header class="sticky top-0 z-40 bg-neutral-950/90 backdrop-blur-xl border-b border-amber-900/30 shadow-2xl">
+    <header class="sticky top-0 z-40 bg-neutral-950/90 backdrop-blur-2xl border-b border-amber-900/30 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <img src="Logo BSN.jpg" alt="Logo BSN" class="h-11 w-11 sm:h-12 sm:w-12 object-cover rounded-2xl border border-amber-500/60 shadow-lg">
+            <div class="flex items-center space-x-3.5">
+                <img src="Logo BSN.jpg" alt="Logo BSN" class="h-11 w-11 sm:h-12 sm:w-12 object-cover rounded-2xl border-2 border-amber-500/60 shadow-xl">
                 <div>
-                    <span class="text-sm sm:text-base font-bold tracking-wider text-amber-400 block leading-tight">BUMI SENI NUSANTARA</span>
-                    <span class="text-[9px] sm:text-[10px] text-amber-200/60 tracking-widest uppercase">Crafting Nature Into Timeless Beauty</span>
+                    <span class="text-sm sm:text-base font-extrabold tracking-wider text-amber-400 block leading-tight">BUMI SENI NUSANTARA</span>
+                    <span class="text-[9px] sm:text-[10px] text-amber-200/60 tracking-[0.2em] uppercase font-medium">Crafting Nature Into Timeless Beauty</span>
                 </div>
             </div>
             <nav class="hidden lg:flex space-x-8 text-sm font-medium text-neutral-300">
@@ -55,105 +61,105 @@
     </header>
 
     <!-- Beranda / Hero Section -->
-    <section id="beranda" class="relative hero-pattern py-32 lg:py-48 text-center px-4 border-b border-amber-900/20 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-900/10 via-transparent to-transparent pointer-events-none"></div>
+    <section id="beranda" class="relative hero-pattern py-36 lg:py-52 text-center px-4 border-b border-amber-900/30 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-600/10 via-transparent to-transparent pointer-events-none"></div>
         <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
             <div class="mb-8 relative group">
-                <div class="absolute -inset-2 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-65 transition duration-700"></div>
-                <img src="Logo BSN.jpg" alt="Logo Utama BSN" class="relative h-40 w-40 sm:h-48 sm:w-48 object-cover rounded-3xl border-2 border-amber-500/60 shadow-2xl mx-auto">
+                <div class="absolute -inset-3 bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-700 rounded-3xl blur-2xl opacity-40 group-hover:opacity-75 transition duration-700"></div>
+                <img src="Logo BSN.jpg" alt="Logo Utama BSN" class="relative h-40 w-40 sm:h-48 sm:w-48 object-cover rounded-3xl border-2 border-amber-500/70 shadow-2xl mx-auto">
             </div>
 
-            <span class="inline-block py-2 px-6 rounded-full bg-amber-950/60 border border-amber-600/40 text-amber-400 text-xs font-semibold tracking-widest uppercase mb-6 shadow-inner backdrop-blur-md">Studio Kreatif Bambu & Seni Nusantara</span>
+            <span class="inline-block py-2.5 px-7 rounded-full bg-amber-950/70 border border-amber-600/40 text-amber-400 text-xs font-semibold tracking-[0.25em] uppercase mb-8 shadow-inner backdrop-blur-md">Studio Kreatif Bambu & Seni Nusantara</span>
             
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                Membangun Ruang, <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-600">Menghidupkan Cerita</span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-8 leading-[1.1]">
+                Membangun Ruang, <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-yellow-600">Menghidupkan Cerita</span>
             </h1>
             
-            <div class="space-y-3 text-lg sm:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+            <div class="space-y-4 text-lg sm:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                 <p>Setiap ruang memiliki cerita.</p>
                 <p>Setiap karya memiliki jiwa.</p>
-                <p class="text-amber-200/90 font-normal">Dan setiap bambu yang kami olah menyimpan warisan alam yang layak diteruskan kepada generasi berikutnya.</p>
+                <p class="text-amber-200/90 font-medium italic">Dan setiap bambu yang kami olah menyimpan warisan alam yang layak diteruskan kepada generasi berikutnya.</p>
             </div>
 
-            <div class="space-y-3 text-neutral-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed mb-8">
+            <div class="space-y-4 text-neutral-300 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed mb-10 bg-neutral-900/40 p-8 rounded-3xl border border-amber-900/30 backdrop-blur-md">
                 <p>
                     <strong class="text-amber-400 font-semibold">Bumi Seni Nusantara</strong>, hadir bukan sekadar sebagai pengrajin bambu. Kami adalah studio kreatif yang memadukan seni, desain, konstruksi, dan kearifan lokal untuk menciptakan karya yang bernilai tinggi.
                 </p>
                 <p>
                     Berawal dari Bumi Seni Nusantara, tempat para pengrajin dan seniman tumbuh bersama selama bertahun-tahun, kami membangun sebuah ekosistem kreatif yang menghubungkan tradisi dengan kebutuhan arsitektur dan pariwisata modern.
                 </p>
-                <p class="text-amber-300/90 font-medium pt-2">
+                <p class="text-amber-300 font-medium pt-2">
                     Melalui tangan-tangan terampil para pengrajin, kami menghadirkan karya yang mengutamakan kualitas, keindahan, fungsi, serta keberlanjutan.
                 </p>
             </div>
             
-            <p class="text-sm tracking-widest text-amber-400 uppercase font-semibold mb-10">Crafting Nature Into Timeless Beauty</p>
+            <p class="text-xs sm:text-sm tracking-[0.3em] text-amber-400 uppercase font-semibold mb-10">Crafting Nature Into Timeless Beauty</p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-                <a href="#tentang" class="bg-amber-600 hover:bg-amber-500 text-neutral-950 font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-amber-600/20 hover:scale-105 duration-300">Pelajari Lebih Lanjut</a>
-                <a href="#kontak" class="bg-neutral-900/80 hover:bg-neutral-800 border border-amber-700/40 text-neutral-200 font-semibold px-8 py-4 rounded-2xl transition backdrop-blur-md hover:border-amber-500">Hubungi Kami</a>
+                <a href="#tentang" class="bg-amber-600 hover:bg-amber-500 text-neutral-950 font-bold px-9 py-4 rounded-2xl transition shadow-xl shadow-amber-600/25 hover:scale-105 duration-300">Pelajari Lebih Lanjut</a>
+                <a href="#kontak" class="bg-neutral-900/90 hover:bg-neutral-800 border border-amber-700/50 text-neutral-200 font-semibold px-9 py-4 rounded-2xl transition backdrop-blur-md hover:border-amber-500 shadow-lg">Hubungi Kami</a>
             </div>
         </div>
     </section>
 
     <!-- Tentang Kami & Filosofi Material -->
-    <section id="tentang" class="py-28 bg-neutral-950 px-4 relative">
+    <section id="tentang" class="py-32 bg-neutral-950 px-4 relative">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-5xl font-bold text-amber-500 mb-6 tracking-tight">Tentang Kami</h2>
-                <p class="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-6 font-light">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-amber-500 mb-6 tracking-tight">Tentang Kami</h2>
+                <p class="text-neutral-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-6 font-light">
                     Bumi Seni Nusantara yang berfokus pada pengembangan karya bambu, kayu, seni rupa, dan landscape artistik.
                 </p>
-                <p class="text-neutral-400 text-base leading-relaxed max-w-3xl mx-auto font-light">
+                <p class="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto font-light">
                     Kami melayani berbagai kebutuhan proyek mulai dari resort, hotel, villa, restoran, café, kawasan wisata, ruang publik, hingga hunian eksklusif.
                 </p>
             </div>
 
             <!-- Filosofi Bambu & Karya -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mt-12">
-                <div class="glow-box p-8 sm:p-10 rounded-3xl bg-neutral-900/80 border border-amber-600/30 flex flex-col justify-center relative overflow-hidden backdrop-blur-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-center relative overflow-hidden">
                     <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-amber-400 to-amber-600"></div>
-                    <p class="text-neutral-300 font-light leading-relaxed mb-4">Kami percaya bahwa bambu bukan sekadar material bangunan.</p>
-                    <p class="text-amber-400 font-bold text-lg mb-2">Bambu adalah identitas.</p>
-                    <p class="text-amber-400 font-bold text-lg mb-2">Bambu adalah budaya.</p>
-                    <p class="text-amber-400 font-bold text-lg mb-4">Bambu adalah karya seni yang mampu memberikan pengalaman berbeda bagi setiap orang yang menikmatinya.</p>
-                    <p class="text-neutral-400 text-sm font-light">Karena itu setiap proyek kami selalu dirancang secara khusus sesuai karakter lokasi dan kebutuhan klien.</p>
+                    <p class="text-neutral-300 font-light leading-relaxed mb-4 text-base">Kami percaya bahwa bambu bukan sekadar material bangunan.</p>
+                    <p class="text-amber-400 font-bold text-xl mb-2">Bambu adalah identitas.</p>
+                    <p class="text-amber-400 font-bold text-xl mb-2">Bambu adalah budaya.</p>
+                    <p class="text-amber-400 font-bold text-xl mb-6">Bambu adalah karya seni yang mampu memberikan pengalaman berbeda bagi setiap orang yang menikmatinya.</p>
+                    <p class="text-neutral-400 text-sm font-light italic">Karena itu setiap proyek kami selalu dirancang secara khusus sesuai karakter lokasi dan kebutuhan klien.</p>
                 </div>
 
-                <div class="glow-box p-8 sm:p-10 rounded-3xl bg-neutral-900/80 border border-amber-600/30 flex flex-col justify-center relative overflow-hidden backdrop-blur-md">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-center relative overflow-hidden">
                     <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-amber-400 to-amber-600"></div>
-                    <h3 class="text-xl font-bold text-amber-400 mb-4">Filosofi Kami</h3>
-                    <p class="text-neutral-300 leading-relaxed text-sm sm:text-base font-light mb-4">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-6">Filosofi Kami</h3>
+                    <p class="text-neutral-300 leading-relaxed text-base font-light mb-4">
                         Kami percaya bahwa karya terbaik lahir ketika alam, seni, dan manusia bekerja bersama. Setiap bambu yang kami olah bukan hanya menjadi bangunan atau furnitur.
                     </p>
-                    <p class="text-neutral-300 leading-relaxed text-sm sm:text-base font-light mb-2">Ia menjadi ruang untuk berkumpul.</p>
-                    <p class="text-neutral-300 leading-relaxed text-sm sm:text-base font-light mb-2">Menjadi tempat lahirnya cerita.</p>
-                    <p class="text-amber-200/90 font-medium">Menjadi bagian dari pengalaman yang akan selalu dikenang.</p>
+                    <p class="text-neutral-300 leading-relaxed text-base font-light mb-3">Ia menjadi ruang untuk berkumpul.</p>
+                    <p class="text-neutral-300 leading-relaxed text-base font-light mb-3">Menjadi tempat lahirnya cerita.</p>
+                    <p class="text-amber-200/90 font-medium text-base pt-2">Menjadi bagian dari pengalaman yang akan selalu dikenang.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Visi & Misi -->
-    <section id="visi-misi" class="py-24 bg-neutral-900/30 border-y border-amber-900/20 px-4 backdrop-blur-sm">
+    <section id="visi-misi" class="py-28 bg-neutral-900/30 border-y border-amber-900/20 px-4 backdrop-blur-md">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            <div class="glow-box bg-neutral-900/80 p-8 sm:p-10 rounded-3xl border border-amber-800/40 flex flex-col justify-between backdrop-blur-md">
+            <div class="luxury-card p-8 sm:p-12 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-bold text-amber-400 mb-6 flex items-center gap-3">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-amber-400 mb-6 flex items-center gap-3">
                         <span class="w-3.5 h-3.5 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50"></span> Visi
                     </h3>
-                    <p class="text-neutral-300 leading-relaxed text-base sm:text-lg font-light">
+                    <p class="text-neutral-300 leading-relaxed text-lg sm:text-xl font-light">
                         Menjadi studio kreatif bambu dan seni Nusantara yang dikenal atas kualitas karya, inovasi desain, serta kontribusinya dalam memberdayakan pengrajin lokal dan mengangkat potensi budaya Indonesia.
                     </p>
                 </div>
             </div>
             
-            <div class="glow-box bg-neutral-900/80 p-8 sm:p-10 rounded-3xl border border-amber-800/40 flex flex-col justify-between backdrop-blur-md">
+            <div class="luxury-card p-8 sm:p-12 rounded-3xl flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-bold text-amber-400 mb-6 flex items-center gap-3">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-amber-400 mb-6 flex items-center gap-3">
                         <span class="w-3.5 h-3.5 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50"></span> Misi
                     </h3>
-                    <ul class="text-neutral-300 space-y-3.5 text-sm sm:text-base font-light">
+                    <ul class="text-neutral-300 space-y-4 text-base sm:text-lg font-light">
                         <li class="flex items-start gap-3"><span class="text-amber-500 font-bold">•</span> Menghasilkan karya bambu dan kayu dengan standar kualitas tinggi.</li>
                         <li class="flex items-start gap-3"><span class="text-amber-500 font-bold">•</span> Mengembangkan desain yang artistik, fungsional, dan berkelanjutan.</li>
                         <li class="flex items-start gap-3"><span class="text-amber-500 font-bold">•</span> Menjadi mitra terpercaya bagi hotel, resort, villa, kawasan wisata, perusahaan, dan pemerintah.</li>
@@ -166,19 +172,21 @@
     </section>
 
     <!-- Layanan Kami -->
-    <section id="layanan" class="py-28 bg-neutral-950 px-4">
+    <section id="layanan" class="py-32 bg-neutral-950 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-5xl font-bold text-amber-500 mb-4 tracking-tight">Layanan Kami</h2>
-                <p class="text-neutral-400 font-light">Solusi karya profesional untuk menghidupkan dan memperkuat karakter ruang Anda.</p>
+            <div class="text-center mb-20">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-amber-500 mb-4 tracking-tight">Layanan Kami</h2>
+                <p class="text-neutral-400 text-lg font-light">Solusi karya profesional untuk menghidupkan dan memperkuat karakter ruang Anda.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Layanan 1 -->
-                <div class="glow-box bg-neutral-900/80 p-8 rounded-3xl border border-amber-900/30 hover:border-amber-500/60 transition duration-300 backdrop-blur-md">
-                    <h3 class="text-xl font-bold text-amber-400 mb-3">Bamboo Construction</h3>
-                    <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Kami merancang dan membangun berbagai struktur bambu yang kuat, estetis, dan memiliki karakter khas.</p>
-                    <ul class="text-sm text-neutral-400 space-y-2 border-t border-neutral-800 pt-4 font-light">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Bamboo Construction</h3>
+                        <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Kami merancang dan membangun berbagai struktur bambu yang kuat, estetis, dan memiliki karakter khas.</p>
+                    </div>
+                    <ul class="text-sm text-neutral-400 space-y-2.5 border-t border-neutral-800/80 pt-5 font-light">
                         <li>• Gazebo</li>
                         <li>• Saung</li>
                         <li>• Pergola</li>
@@ -191,10 +199,12 @@
                 </div>
 
                 <!-- Layanan 2 -->
-                <div class="glow-box bg-neutral-900/80 p-8 rounded-3xl border border-amber-900/30 hover:border-amber-500/60 transition duration-300 backdrop-blur-md">
-                    <h3 class="text-xl font-bold text-amber-400 mb-3">Bamboo Furniture</h3>
-                    <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Furnitur yang dirancang khusus untuk menghadirkan kenyamanan sekaligus memperkuat karakter ruang.</p>
-                    <ul class="text-sm text-neutral-400 space-y-2 border-t border-neutral-800 pt-4 font-light">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Bamboo Furniture</h3>
+                        <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Furnitur yang dirancang khusus untuk menghadirkan kenyamanan sekaligus memperkuat karakter ruang.</p>
+                    </div>
+                    <ul class="text-sm text-neutral-400 space-y-2.5 border-t border-neutral-800/80 pt-5 font-light">
                         <li>• Furniture Resort</li>
                         <li>• Furniture Hotel</li>
                         <li>• Furniture Villa</li>
@@ -205,10 +215,12 @@
                 </div>
 
                 <!-- Layanan 3 -->
-                <div class="glow-box bg-neutral-900/80 p-8 rounded-3xl border border-amber-900/30 hover:border-amber-500/60 transition duration-300 backdrop-blur-md">
-                    <h3 class="text-xl font-bold text-amber-400 mb-3">Seni & Dekorasi Artistik</h3>
-                    <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Menghadirkan sentuhan seni yang menjadikan setiap ruang memiliki identitas.</p>
-                    <ul class="text-sm text-neutral-400 space-y-2 border-t border-neutral-800 pt-4 font-light">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Seni & Dekorasi Artistik</h3>
+                        <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Menghadirkan sentuhan seni yang menjadikan setiap ruang memiliki identitas.</p>
+                    </div>
+                    <ul class="text-sm text-neutral-400 space-y-2.5 border-t border-neutral-800/80 pt-5 font-light">
                         <li>• Relief Artistik</li>
                         <li>• Patung Kayu</li>
                         <li>• Patung Bambu</li>
@@ -223,10 +235,12 @@
                 </div>
 
                 <!-- Layanan 4 -->
-                <div class="glow-box bg-neutral-900/80 p-8 rounded-3xl border border-amber-900/30 hover:border-amber-500/60 transition duration-300 backdrop-blur-md">
-                    <h3 class="text-xl font-bold text-amber-400 mb-3">Landscape & Garden</h3>
-                    <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Kami membantu menciptakan kawasan yang memiliki daya tarik visual dan pengalaman ruang yang berkesan.</p>
-                    <ul class="text-sm text-neutral-400 space-y-2 border-t border-neutral-800 pt-4 font-light">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Landscape & Garden</h3>
+                        <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Kami membantu menciptakan kawasan yang memiliki daya tarik visual dan pengalaman ruang yang berkesan.</p>
+                    </div>
+                    <ul class="text-sm text-neutral-400 space-y-2.5 border-t border-neutral-800/80 pt-5 font-light">
                         <li>• Landscape Resort</li>
                         <li>• Landscape Hotel</li>
                         <li>• Landscape Villa</li>
@@ -240,10 +254,12 @@
                 </div>
 
                 <!-- Layanan 5 -->
-                <div class="glow-box bg-neutral-900/80 p-8 rounded-3xl border border-amber-900/30 hover:border-amber-500/60 transition duration-300 backdrop-blur-md md:col-span-2 lg:col-span-2">
-                    <h3 class="text-xl font-bold text-amber-400 mb-3">Bamboo Craft</h3>
-                    <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Produk kerajinan yang mengutamakan kualitas, fungsi, dan nilai estetika.</p>
-                    <ul class="text-sm text-neutral-400 space-y-2 border-t border-neutral-800 pt-4 font-light grid grid-cols-1 sm:grid-cols-2">
+                <div class="luxury-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Bamboo Craft</h3>
+                        <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Produk kerajinan yang mengutamakan kualitas, fungsi, dan nilai estetika.</p>
+                    </div>
+                    <ul class="text-sm text-neutral-400 space-y-2.5 border-t border-neutral-800/80 pt-5 font-light grid grid-cols-1 sm:grid-cols-2">
                         <li>• Souvenir</li>
                         <li>• Produk Custom</li>
                         <li>• Anyaman</li>
@@ -252,4 +268,8 @@
                     </ul>
                 </div>
             </div>
-        
+        </div>
+    </section>
+
+    <!-- Mengapa Memilih Kami & Nilai Perusahaan -->
+    
