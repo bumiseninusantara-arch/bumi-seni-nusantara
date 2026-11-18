@@ -1,114 +1,177 @@
-<!-- Galeri Video Karya - Bumi Seni Nusantara -->
-<section id="galeri-video" class="py-16 bg-neutral-900 text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold tracking-tight text-amber-500 sm:text-4xl">Galeri Karya & Dokumentasi</h2>
-      <p class="mt-4 text-lg text-neutral-400">Saksikan proses pembuatan dan keindahan detail karya seni bambu serta kayu kami.</p>
-    </div>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bumi Seni Nusantara - Seni Bambu & Kayu Berkualitas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-900 text-neutral-100 font-sans antialiased">
 
-    <!-- Grid Video (Responsive: 1 kolom di HP, 2 di Tablet, 3 di Desktop) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Video 1 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1YvrKpRvhgXInofXDndbU8ZCCRlOGHRJO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+    <!-- Header / Navigasi -->
+    <header class="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur border-b border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-bold tracking-wider text-amber-500">BUMI SENI NUSANTARA</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-neutral-300">
+                <a href="#beranda" class="hover:text-amber-500 transition">Beranda</a>
+                <a href="#tentang" class="hover:text-amber-500 transition">Tentang Kami</a>
+                <a href="#galeri-video" class="hover:text-amber-500 transition">Galeri Video</a>
+                <a href="#kontak" class="hover:text-amber-500 transition">Kontak</a>
+            </nav>
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 01</h3>
+    </header>
+
+    <!-- Bagian Beranda / Hero -->
+    <section id="beranda" class="relative py-24 lg:py-32 bg-gradient-to-b from-neutral-900 to-neutral-800 text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
+                Mahakarya Seni <span class="text-amber-500">Bambu & Kayu</span> Nusantara
+            </h1>
+            <p class="text-lg sm:text-xl text-neutral-400 mb-10 leading-relaxed">
+                Menghadirkan keindahan estetika tradisional dan modern melalui sentuhan tangan pengrajin ahli lokal berkualitas tinggi.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#galeri-video" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-3 rounded-xl transition shadow-lg">Lihat Galeri Video</a>
+                <a href="#kontak" class="bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 text-neutral-200 font-semibold px-8 py-3 rounded-xl transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Kami -->
+    <section id="tentang" class="py-20 bg-neutral-900 border-t border-neutral-800 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-amber-500 mb-6">Tentang Bumi Seni Nusantara</h2>
+            <p class="text-neutral-300 text-lg leading-relaxed">
+                Kami adalah wadah kreativitas pengrajin seni bambu dan kayu yang berdedikasi tinggi melestarikan warisan budaya sekaligus menghadirkan karya dekorasi, furnitur, serta arsitektur bernilai seni tinggi untuk Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- GALERI VIDEO KARYA (10 Video Google Drive) -->
+    <section id="galeri-video" class="py-16 bg-neutral-900 border-t border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold tracking-tight text-amber-500 sm:text-4xl">Galeri Karya & Dokumentasi</h2>
+          <p class="mt-4 text-lg text-neutral-400">Saksikan proses pembuatan dan keindahan detail karya seni bambu serta kayu kami.</p>
+        </div>
+
+        <!-- Grid Video (Responsive: 1 kolom di HP, 2 di Tablet, 3 di Desktop) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Video 1 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1YvrKpRvhgXInofXDndbU8ZCCRlOGHRJO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 01</h3>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/17sitzUjk6MP8Qmm7fNZFk2SjvDzdzuN8/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 02</h3>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1ImcLkeNC43dSzHKPVFEJEwz1cDusnEyS/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 03</h3>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1YEoX3aGsHaP2kw4-fZzAScYBzlskBzET/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 04</h3>
+            </div>
+          </div>
+
+          <!-- Video 5 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/17Lccq7PwJsDKqfwzJm5YqIr48Nf_8vaN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 05</h3>
+            </div>
+          </div>
+
+          <!-- Video 6 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/172TqWTHKq_HL-33A9PmQcbf7zHHK3CMN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 06</h3>
+            </div>
+          </div>
+
+          <!-- Video 7 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1gXbrmolMv1uAYAXWcTYSVaMCQpL9snKe/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 07</h3>
+            </div>
+          </div>
+
+          <!-- Video 8 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1D7yujkOups0U_v2ZUEEDc7SrHcGHASLO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 08</h3>
+            </div>
+          </div>
+
+          <!-- Video 9 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1y0x4ANdMSe4BDFl6wBEvYLxv_buhTyO3/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 09</h3>
+            </div>
+          </div>
+
+          <!-- Video 10 -->
+          <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
+            <div class="relative w-full aspect-video">
+              <iframe src="https://drive.google.com/file/d/1z16Yd2bagYxYpIA-Y-SzzySUcVs7k2NJ/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 10</h3>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <!-- Video 2 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/17sitzUjk6MP8Qmm7fNZFk2SjvDzdzuN8/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
+    <!-- Footer -->
+    <footer id="kontak" class="bg-neutral-950 text-neutral-400 py-12 border-t border-neutral-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-amber-500 font-semibold mb-2">Bumi Seni Nusantara</p>
+            <p class="text-sm">&copy; 2026 Bumi Seni Nusantara. Hak Cipta Dilindungi.</p>
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 02</h3>
-        </div>
-      </div>
+    </footer>
 
-      <!-- Video 3 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1ImcLkeNC43dSzHKPVFEJEwz1cDusnEyS/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 03</h3>
-        </div>
-      </div>
-
-      <!-- Video 4 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1YEoX3aGsHaP2kw4-fZzAScYBzlskBzET/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 04</h3>
-        </div>
-      </div>
-
-      <!-- Video 5 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/17Lccq7PwJsDKqfwzJm5YqIr48Nf_8vaN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 05</h3>
-        </div>
-      </div>
-
-      <!-- Video 6 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/172TqWTHKq_HL-33A9PmQcbf7zHHK3CMN/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 06</h3>
-        </div>
-      </div>
-
-      <!-- Video 7 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1gXbrmolMv1uAYAXWcTYSVaMCQpL9snKe/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 07</h3>
-        </div>
-      </div>
-
-      <!-- Video 8 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1D7yujkOups0U_v2ZUEEDc7SrHcGHASLO/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 08</h3>
-        </div>
-      </div>
-
-      <!-- Video 9 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1y0x4ANdMSe4BDFl6wBEvYLxv_buhTyO3/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 09</h3>
-        </div>
-      </div>
-
-      <!-- Video 10 -->
-      <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-lg border border-neutral-700">
-        <div class="relative w-full aspect-video">
-          <iframe src="https://drive.google.com/file/d/1z16Yd2bagYxYpIA-Y-SzzySUcVs7k2NJ/preview" class="absolute top-0 left-0 w-full h-full border-0" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-lg text-neutral-200">Dokumentasi Karya 10</h3>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+</body>
+</html>
