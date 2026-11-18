@@ -9,46 +9,34 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-pattern {
-            background: radial-gradient(circle at center, rgba(20, 15, 8, 0.4) 0%, rgba(3, 3, 3, 0.95) 80%), url('Logo BSN.jpg') center/cover no-repeat fixed;
+        .hero-bg {
+            background: radial-gradient(circle at center, rgba(30, 20, 10, 0.6) 0%, rgba(2, 2, 2, 0.98) 85%), url('Logo BSN.jpg') center/cover no-repeat fixed;
         }
-        .gold-border {
-            border: 1px solid rgba(217, 119, 6, 0.3);
-            position: relative;
+        .gold-frame {
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.9);
+            transition: all 0.4s ease;
         }
-        .gold-border::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            border: 1px solid transparent;
-            background: linear-gradient(to bottom right, rgba(245, 158, 11, 0.4), transparent) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: destination-out;
-            mask-composite: exclude;
-            pointer-events: none;
+        .gold-frame:hover {
+            border-color: rgba(245, 158, 11, 0.8);
+            box-shadow: 0 20px 45px -10px rgba(217, 119, 6, 0.25);
+            transform: translateY(-4px);
         }
-        .artistic-card {
-            background: linear-gradient(135deg, rgba(18, 18, 18, 0.85) 0%, rgba(8, 8, 8, 0.95) 100%);
-            box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(245, 158, 11, 0.15);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        .luxury-gradient {
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.92) 0%, rgba(5, 5, 5, 0.98) 100%);
         }
-        .artistic-card:hover {
-            box-shadow: 0 30px 60px -15px rgba(217, 119, 6, 0.2), inset 0 1px 3px rgba(245, 158, 11, 0.4);
-            transform: translateY(-6px);
-        }
-        .gold-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(217, 119, 6, 0.5), transparent);
+        .gold-line {
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(217, 119, 6, 0.8), transparent);
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #030303; }
+        ::-webkit-scrollbar-track { background: #020202; }
         ::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #d97706; }
     </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-amber-600 selection:text-white">
+<body class="bg-[#050505] text-neutral-100 font-sans antialiased selection:bg-amber-600 selection:text-white">
 
     <!-- Tombol WhatsApp Melayang (Floating CTA) -->
     <a href="https://wa.me/628132207215?text=Halo%20Bumi%20Seni%20Nusantara,%20saya%20tertarik%20untuk%20berkonsultasi%20mengenai%20proyek%20bambu%20dan%20seni." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group border border-emerald-400/50 backdrop-blur-md" aria-label="WhatsApp Konsultasi">
@@ -57,7 +45,7 @@
     </a>
 
     <!-- Header / Navigasi Profesional -->
-    <header class="sticky top-0 z-40 bg-neutral-950/85 backdrop-blur-2xl border-b border-amber-900/30 shadow-2xl">
+    <header class="sticky top-0 z-40 bg-[#050505]/90 backdrop-blur-2xl border-b border-amber-900/30 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3.5">
                 <img src="Logo BSN.jpg" alt="Logo BSN" class="h-11 w-11 sm:h-12 sm:w-12 object-cover rounded-2xl border-2 border-amber-500/70 shadow-xl">
@@ -79,7 +67,7 @@
     </header>
 
     <!-- Beranda / Hero Section -->
-    <section id="beranda" class="relative hero-pattern py-36 lg:py-56 text-center px-4 border-b border-amber-900/30 overflow-hidden">
+    <section id="beranda" class="relative hero-bg py-36 lg:py-56 text-center px-4 border-b border-amber-900/30 overflow-hidden">
         <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10">
             <div class="mb-8 relative group">
                 <div class="absolute -inset-4 bg-gradient-to-r from-amber-500 via-yellow-600 to-amber-700 rounded-3xl blur-3xl opacity-50 group-hover:opacity-80 transition duration-700"></div>
@@ -98,15 +86,15 @@
                 <p class="text-amber-200 font-medium italic">Dan setiap bambu yang kami olah menyimpan warisan alam yang layak diteruskan kepada generasi berikutnya.</p>
             </div>
 
-            <div class="gold-border space-y-4 text-neutral-200 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed mb-10 artistic-card p-8 sm:p-10 rounded-3xl backdrop-blur-xl">
+            <div class="gold-frame space-y-5 text-neutral-200 text-base sm:text-lg max-w-3xl mx-auto font-light leading-relaxed mb-10 luxury-gradient p-8 sm:p-12 rounded-3xl backdrop-blur-xl">
                 <p>
                     <strong class="text-amber-400 font-bold">Bumi Seni Nusantara</strong>, hadir bukan sekadar sebagai pengrajin bambu. Kami adalah studio kreatif yang memadukan seni, desain, konstruksi, dan kearifan lokal untuk menciptakan karya yang bernilai tinggi.
                 </p>
-                <div class="gold-divider my-4"></div>
+                <div class="gold-line my-4"></div>
                 <p>
                     Berawal dari Bumi Seni Nusantara, tempat para pengrajin dan seniman tumbuh bersama selama bertahun-tahun, kami membangun sebuah ekosistem kreatif yang menghubungkan tradisi dengan kebutuhan arsitektur dan pariwisata modern.
                 </p>
-                <div class="gold-divider my-4"></div>
+                <div class="gold-line my-4"></div>
                 <p class="text-amber-300 font-medium">
                     Melalui tangan-tangan terampil para pengrajin, kami menghadirkan karya yang mengutamakan kualitas, keindahan, fungsi, serta keberlanjutan.
                 </p>
@@ -116,18 +104,18 @@
             
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                 <a href="#tentang" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-bold px-10 py-4 rounded-2xl transition shadow-2xl shadow-amber-600/30 hover:scale-105 duration-300">Pelajari Lebih Lanjut</a>
-                <a href="#kontak" class="bg-neutral-900/90 hover:bg-neutral-800 gold-border text-neutral-200 font-semibold px-10 py-4 rounded-2xl transition backdrop-blur-md shadow-xl">Hubungi Kami</a>
+                <a href="#kontak" class="bg-neutral-900/90 hover:bg-neutral-800 gold-frame text-neutral-200 font-semibold px-10 py-4 rounded-2xl transition backdrop-blur-md shadow-xl">Hubungi Kami</a>
             </div>
         </div>
     </section>
 
     <!-- Tentang Kami & Filosofi Material -->
-    <section id="tentang" class="py-36 bg-neutral-950 px-4 relative">
+    <section id="tentang" class="py-36 bg-[#050505] px-4 relative">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-24">
                 <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Filosofi & Identitas</span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white mb-6 tracking-tight">Tentang Kami</h2>
-                <div class="gold-divider max-w-xs mx-auto mb-8"></div>
+                <div class="gold-line max-w-xs mx-auto mb-8"></div>
                 <p class="text-neutral-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto mb-6 font-light">
                     Bumi Seni Nusantara yang berfokus pada pengembangan karya bambu, kayu, seni rupa, dan landscape artistik.
                 </p>
@@ -138,7 +126,7 @@
 
             <!-- Filosofi Bambu & Karya -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                <div class="artistic-card gold-border p-8 sm:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden">
+                <div class="gold-frame luxury-gradient p-8 sm:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
                     <p class="text-neutral-300 font-light leading-relaxed mb-4 text-base">Kami percaya bahwa bambu bukan sekadar material bangunan.</p>
                     <p class="text-amber-400 font-extrabold text-xl mb-2">Bambu adalah identitas.</p>
@@ -147,7 +135,7 @@
                     <p class="text-neutral-400 text-sm font-light italic">Karena itu setiap proyek kami selalu dirancang secara khusus sesuai karakter lokasi dan kebutuhan klien.</p>
                 </div>
 
-                <div class="artistic-card gold-border p-8 sm:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden">
+                <div class="gold-frame luxury-gradient p-8 sm:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
                     <h3 class="text-2xl font-black text-amber-400 mb-6">Filosofi Kami</h3>
                     <p class="text-neutral-300 leading-relaxed text-base font-light mb-4">
@@ -162,9 +150,9 @@
     </section>
 
     <!-- Visi & Misi -->
-    <section id="visi-misi" class="py-32 bg-neutral-900/40 border-y border-amber-900/30 px-4 backdrop-blur-xl">
+    <section id="visi-misi" class="py-32 bg-neutral-900/30 border-y border-amber-900/30 px-4 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            <div class="artistic-card gold-border p-8 sm:p-12 rounded-3xl flex flex-col justify-between">
+            <div class="gold-frame luxury-gradient p-8 sm:p-12 rounded-3xl flex flex-col justify-between">
                 <div>
                     <h3 class="text-2xl sm:text-3xl font-black text-amber-400 mb-6 flex items-center gap-3">
                         <span class="w-3.5 h-3.5 rounded-full bg-amber-500 shadow-lg shadow-amber-500/80"></span> Visi
@@ -175,7 +163,7 @@
                 </div>
             </div>
             
-            <div class="artistic-card gold-border p-8 sm:p-12 rounded-3xl flex flex-col justify-between">
+            <div class="gold-frame luxury-gradient p-8 sm:p-12 rounded-3xl flex flex-col justify-between">
                 <div>
                     <h3 class="text-2xl sm:text-3xl font-black text-amber-400 mb-6 flex items-center gap-3">
                         <span class="w-3.5 h-3.5 rounded-full bg-amber-500 shadow-lg shadow-amber-500/80"></span> Misi
@@ -193,18 +181,18 @@
     </section>
 
     <!-- Layanan Kami -->
-    <section id="layanan" class="py-36 bg-neutral-950 px-4">
+    <section id="layanan" class="py-36 bg-[#050505] px-4">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
                 <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Solusi Profesional</span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Layanan Kami</h2>
-                <div class="gold-divider max-w-xs mx-auto mb-6"></div>
+                <div class="gold-line max-w-xs mx-auto mb-6"></div>
                 <p class="text-neutral-400 text-lg font-light">Solusi karya profesional untuk menghidupkan dan memperkuat karakter ruang Anda.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Layanan 1 -->
-                <div class="artistic-card gold-border p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                <div class="gold-frame luxury-gradient p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
                     <div>
                         <h3 class="text-2xl font-black text-amber-400 mb-4">Bamboo Construction</h3>
                         <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Kami merancang dan membangun berbagai struktur bambu yang kuat, estetis, dan memiliki karakter khas.</p>
@@ -222,7 +210,7 @@
                 </div>
 
                 <!-- Layanan 2 -->
-                <div class="artistic-card gold-border p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                <div class="gold-frame luxury-gradient p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
                     <div>
                         <h3 class="text-2xl font-black text-amber-400 mb-4">Bamboo Furniture</h3>
                         <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Furnitur yang dirancang khusus untuk menghadirkan kenyamanan sekaligus memperkuat karakter ruang.</p>
@@ -238,7 +226,7 @@
                 </div>
 
                 <!-- Layanan 3 -->
-                <div class="artistic-card gold-border p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                <div class="gold-frame luxury-gradient p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
                     <div>
                         <h3 class="text-2xl font-black text-amber-400 mb-4">Seni & Dekorasi Artistik</h3>
                         <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Menghadirkan sentuhan seni yang menjadikan setiap ruang memiliki identitas.</p>
@@ -258,7 +246,7 @@
                 </div>
 
                 <!-- Layanan 4 -->
-                <div class="artistic-card gold-border p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
+                <div class="gold-frame luxury-gradient p-8 sm:p-10 rounded-3xl flex flex-col justify-between">
                     <div>
                         <h3 class="text-2xl font-black text-amber-400 mb-4">Landscape & Garden</h3>
                         <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Kami membantu menciptakan kawasan yang memiliki daya tarik visual dan pengalaman ruang yang berkesan.</p>
@@ -277,7 +265,7 @@
                 </div>
 
                 <!-- Layanan 5 -->
-                <div class="artistic-card gold-border p-8 sm:p-10 rounded-3xl flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                <div class="gold-frame luxury-gradient p-8 sm:p-10 rounded-3xl flex flex-col justify-between md:col-span-2 lg:col-span-2">
                     <div>
                         <h3 class="text-2xl font-black text-amber-400 mb-4">Bamboo Craft</h3>
                         <p class="text-neutral-300 text-sm mb-6 font-light leading-relaxed">Produk kerajinan yang mengutamakan kualitas, fungsi, dan nilai estetika.</p>
@@ -295,12 +283,12 @@
     </section>
 
     <!-- Mengapa Memilih Kami & Nilai Perusahaan -->
-    <section id="mengapa" class="py-36 bg-neutral-900/40 border-t border-amber-900/30 px-4 backdrop-blur-xl">
+    <section id="mengapa" class="py-36 bg-neutral-900/30 border-t border-amber-900/30 px-4 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-24">
                 <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Keunggulan Kami</span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white mb-6 tracking-tight">Mengapa Memilih Kami</h2>
-                <div class="gold-divider max-w-xs mx-auto mb-8"></div>
+                <div class="gold-line max-w-xs mx-auto mb-8"></div>
                 <div class="text-neutral-200 text-lg sm:text-xl max-w-3xl mx-auto font-light leading-relaxed space-y-3 mb-8">
                     <p>Karena kami tidak hanya membangun sebuah proyek.</p>
                     <p class="text-amber-300 font-semibold">Kami membantu menciptakan pengalaman.</p>
@@ -314,30 +302,30 @@
 
             <!-- Nilai Perusahaan (Values) -->
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-24">
-                <div class="artistic-card gold-border p-6 sm:p-8 rounded-3xl text-center">
+                <div class="gold-frame luxury-gradient p-6 sm:p-8 rounded-3xl text-center">
                     <h3 class="text-amber-400 font-black text-xl mb-3">Integrity</h3>
                     <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed font-light">Kami menjaga kepercayaan melalui kejujuran, komitmen, dan tanggung jawab.</p>
                 </div>
-                <div class="artistic-card gold-border p-6 sm:p-8 rounded-3xl text-center">
+                <div class="gold-frame luxury-gradient p-6 sm:p-8 rounded-3xl text-center">
                     <h3 class="text-amber-400 font-black text-xl mb-3">Quality</h3>
                     <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed font-light">Kami percaya kualitas adalah investasi jangka panjang.</p>
                 </div>
-                <div class="artistic-card gold-border p-6 sm:p-8 rounded-3xl text-center">
+                <div class="gold-frame luxury-gradient p-6 sm:p-8 rounded-3xl text-center">
                     <h3 class="text-amber-400 font-black text-xl mb-3">Creativity</h3>
                     <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed font-light">Kami menghadirkan solusi desain yang unik dan artistik.</p>
                 </div>
-                <div class="artistic-card gold-border p-6 sm:p-8 rounded-3xl text-center">
+                <div class="gold-frame luxury-gradient p-6 sm:p-8 rounded-3xl text-center">
                     <h3 class="text-amber-400 font-black text-xl mb-3">Sustainability</h3>
                     <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed font-light">Kami mengoptimalkan bambu sebagai material ramah lingkungan yang memiliki masa depan.</p>
                 </div>
-                <div class="artistic-card gold-border p-6 sm:p-8 rounded-3xl text-center md:col-span-3 lg:col-span-1">
+                <div class="gold-frame luxury-gradient p-6 sm:p-8 rounded-3xl text-center md:col-span-3 lg:col-span-1">
                     <h3 class="text-amber-400 font-black text-xl mb-3">Community Empowerment</h3>
                     <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed font-light">Setiap proyek menjadi bagian dari upaya pemberdayaan masyarakat dan pelestarian keterampilan para pengrajin lokal.</p>
                 </div>
             </div>
 
             <!-- Siapa Klien Kami -->
-            <div id="klien" class="artistic-card gold-border rounded-3xl p-8 sm:p-16 text-center">
+            <div id="klien" class="gold-frame luxury-gradient rounded-3xl p-8 sm:p-16 text-center">
                 <h3 class="text-2xl sm:text-4xl font-black text-amber-400 mb-8 tracking-tight">Siapa Klien Kami</h3>
                 <div class="flex flex-wrap justify-center gap-4">
                     <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Hotel</span>
@@ -345,4 +333,65 @@
                     <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Villa</span>
                     <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Restoran</span>
                     <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Café</span>
-                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/9
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Developer</span>
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Kawasan Wisata</span>
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Pemerintah</span>
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Sekolah</span>
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Universitas</span>
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Perusahaan</span>
+                    <span class="px-7 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Event Organizer</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Kontak & WhatsApp Founder -->
+    <footer id="kontak" class="bg-[#050505] border-t border-amber-900/40 py-36 px-4 text-center relative overflow-hidden">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="mb-10 flex justify-center">
+                <div class="p-2.5 rounded-3xl bg-neutral-900 gold-frame shadow-2xl">
+                    <img src="Logo BSN.jpg" alt="Logo Footer BSN" class="h-28 w-28 object-cover rounded-2xl">
+                </div>
+            </div>
+
+            <h2 class="text-3xl sm:text-6xl font-black text-amber-400 mb-6 tracking-tight">Mari Berkarya Bersama</h2>
+            <p class="text-neutral-300 mb-6 max-w-2xl mx-auto leading-relaxed font-light text-base sm:text-lg">
+                Apabila Anda sedang merencanakan pembangunan kawasan wisata, resort, villa, hotel, café, ruang publik, maupun proyek artistik lainnya, kami siap menjadi mitra yang menghadirkan solusi kreatif dari tahap konsep hingga penyelesaian.
+            </p>
+            <p class="text-neutral-400 mb-14 max-w-xl mx-auto leading-relaxed font-light text-sm sm:text-base">
+                Bersama Bumi Seni Nusantara, mari menciptakan karya yang tidak hanya indah dipandang, tetapi juga memiliki nilai budaya, keberlanjutan, dan manfaat bagi masyarakat.
+            </p>
+
+            <div class="mb-16">
+                <a href="https://wa.me/628132207215?text=Halo%20Bumi%20Seni%20Nusantara,%20saya%20tertarik%20dengan%20layanan%20Anda." target="_blank" class="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold px-12 py-5 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 gap-4 border border-emerald-400/50 text-lg">
+                    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Hubungi Founder via WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="gold-frame luxury-gradient inline-block p-8 sm:p-10 rounded-3xl mb-14 max-w-md w-full">
+                <div class="flex justify-around text-center">
+                    <div>
+                        <p class="text-amber-400 font-bold text-base sm:text-lg">Bumi Munandar</p>
+                        <p class="text-neutral-400 text-xs uppercase tracking-[0.25em] mt-1 font-light">Founder</p>
+                    </div>
+                    <div class="w-px bg-amber-900/60"></div>
+                    <div>
+                        <p class="text-amber-400 font-bold text-base sm:text-lg">Yosi Falentina</p>
+                        <p class="text-neutral-400 text-xs uppercase tracking-[0.25em] mt-1 font-light">Ceo-Founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-black text-amber-500 mb-2 tracking-[0.25em]">BUMI SENI NUSANTARA</h3>
+                <p class="text-xs tracking-[0.35em] uppercase text-amber-200/60 mb-6 font-semibold">Crafting Nature Into Timeless Beauty</p>
+                <p class="text-xs text-neutral-600">&copy; 2026 Bumi Seni Nusantara. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
