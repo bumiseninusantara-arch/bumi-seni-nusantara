@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bumi Seni Nusantara - Seni Bambu & Kayu Berkualitas</title>
+    <title>Bumi Seni Nusantara - Crafting Nature Into Timeless Beauty</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-neutral-900 text-neutral-100 font-sans antialiased">
 
-    <!-- Header / Navigasi -->
-    <header class="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur border-b border-neutral-800">
+    <!-- Header / Navigasi dengan Logo -->
+    <header class="sticky top-0 z-50 bg-neutral-900/95 backdrop-blur border-b border-neutral-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <span class="text-xl font-bold tracking-wider text-amber-500">BUMI SENI NUSANTARA</span>
+                <!-- Logo BSN -->
+                <img src="logo.jpg" alt="Logo Bumi Seni Nusantara" class="h-12 w-12 object-cover rounded-lg border border-amber-500/30">
+                <div>
+                    <span class="text-base sm:text-lg font-bold tracking-wider text-amber-500 block leading-tight">BUMI SENI NUSANTARA</span>
+                    <span class="text-xs text-neutral-400 tracking-widest uppercase">Crafting Nature Into Timeless Beauty</span>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-neutral-300">
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-neutral-300">
                 <a href="#beranda" class="hover:text-amber-500 transition">Beranda</a>
                 <a href="#tentang" class="hover:text-amber-500 transition">Tentang Kami</a>
+                <a href="#layanan" class="hover:text-amber-500 transition">Layanan</a>
                 <a href="#galeri-video" class="hover:text-amber-500 transition">Galeri Video</a>
                 <a href="#kontak" class="hover:text-amber-500 transition">Kontak</a>
             </nav>
         </div>
     </header>
 
-    <!-- Bagian Beranda / Hero -->
+    <!-- Beranda / Hero Section -->
     <section id="beranda" class="relative py-24 lg:py-32 bg-gradient-to-b from-neutral-900 to-neutral-800 text-center px-4">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
-                Mahakarya Seni <span class="text-amber-500">Bambu & Kayu</span> Nusantara
+                Membangun Ruang, <span class="text-amber-500">Menghidupkan Cerita</span>
             </h1>
-            <p class="text-lg sm:text-xl text-neutral-400 mb-10 leading-relaxed">
-                Menghadirkan keindahan estetika tradisional dan modern melalui sentuhan tangan pengrajin ahli lokal berkualitas tinggi.
+            <p class="text-lg sm:text-xl text-neutral-400 mb-8 leading-relaxed">
+                Bumi Seni Nusantara hadir memadukan seni, desain, konstruksi, dan kearifan lokal untuk menciptakan karya bambu & kayu bernilai tinggi.
             </p>
+            <p class="text-sm tracking-widest text-amber-500 uppercase font-semibold mb-10">Crafting Nature Into Timeless Beauty</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#galeri-video" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-3 rounded-xl transition shadow-lg">Lihat Galeri Video</a>
                 <a href="#kontak" class="bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 text-neutral-200 font-semibold px-8 py-3 rounded-xl transition">Hubungi Kami</a>
@@ -40,18 +47,85 @@
         </div>
     </section>
 
-    <!-- Bagian Tentang Kami -->
+    <!-- Tentang Kami -->
     <section id="tentang" class="py-20 bg-neutral-900 border-t border-neutral-800 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-amber-500 mb-6">Tentang Bumi Seni Nusantara</h2>
-            <p class="text-neutral-300 text-lg leading-relaxed">
-                Kami adalah wadah kreativitas pengrajin seni bambu dan kayu yang berdedikasi tinggi melestarikan warisan budaya sekaligus menghadirkan karya dekorasi, furnitur, serta arsitektur bernilai seni tinggi untuk Anda.
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-amber-500 mb-6">Tentang Kami</h2>
+            <p class="text-neutral-300 text-lg leading-relaxed mb-6">
+                Bumi Seni Nusantara berfokus pada pengembangan karya bambu, kayu, seni rupa, dan landscape artistik. Kami melayani berbagai kebutuhan proyek mulai dari resort, hotel, villa, restoran, café, kawasan wisata, ruang publik, hingga hunian eksklusif.
+            </p>
+            <p class="text-neutral-400 italic">
+                "Bambu bukan sekadar material bangunan. Bambu adalah identitas, budaya, dan karya seni yang mampu memberikan pengalaman berbeda."
             </p>
         </div>
     </section>
 
-    <!-- GALERI VIDEO KARYA (10 Video Google Drive) -->
-    <section id="galeri-video" class="py-16 bg-neutral-900 border-t border-neutral-800">
+    <!-- Layanan Kami -->
+    <section id="layanan" class="py-20 bg-neutral-900/50 border-t border-neutral-800 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-amber-500 mb-4">Layanan Kami</h2>
+                <p class="text-neutral-400">Solusi kreatif menyeluruh dari tahap konsep hingga penyelesaian.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Layanan 1 -->
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                    <h3 class="text-xl font-bold text-amber-400 mb-3">Bamboo Construction</h3>
+                    <p class="text-neutral-300 text-sm mb-4">Struktur bambu kuat, estetis, dan berkarakter khas.</p>
+                    <ul class="text-sm text-neutral-400 space-y-1">
+                        <li>• Gazebo & Saung</li>
+                        <li>• Pergola & Panel Bambu</li>
+                        <li>• Pagar & Jembatan Bambu</li>
+                        <li>• Bangunan Tematik</li>
+                    </ul>
+                </div>
+                <!-- Layanan 2 -->
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                    <h3 class="text-xl font-bold text-amber-400 mb-3">Bamboo Furniture</h3>
+                    <p class="text-neutral-300 text-sm mb-4">Kenyamanan yang memperkuat karakter ruang.</p>
+                    <ul class="text-sm text-neutral-400 space-y-1">
+                        <li>• Furniture Resort, Hotel & Villa</li>
+                        <li>• Furniture Café & Interior Bambu</li>
+                        <li>• Custom Furniture</li>
+                    </ul>
+                </div>
+                <!-- Layanan 3 -->
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                    <h3 class="text-xl font-bold text-amber-400 mb-3">Seni & Dekorasi Artistik</h3>
+                    <p class="text-neutral-300 text-sm mb-4">Sentuhan seni yang memberi identitas pada ruang.</p>
+                    <ul class="text-sm text-neutral-400 space-y-1">
+                        <li>• Relief & Ukiran</li>
+                        <li>• Patung Kayu & Bambu</li>
+                        <li>• Wall Art & Kaligrafi</li>
+                        <li>• Instalasi Seni & Lukisan</li>
+                    </ul>
+                </div>
+                <!-- Layanan 4 -->
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                    <h3 class="text-xl font-bold text-amber-400 mb-3">Landscape & Garden</h3>
+                    <p class="text-neutral-300 text-sm mb-4">Daya tarik visual dan pengalaman ruang berkesan.</p>
+                    <ul class="text-sm text-neutral-400 space-y-1">
+                        <li>• Landscape Resort & Hotel</li>
+                        <li>• Penataan Taman & Spot Foto</li>
+                        <li>• Gerbang Artistik & Elemen Air</li>
+                    </ul>
+                </div>
+                <!-- Layanan 5 -->
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700 md:col-span-2 lg:col-span-2">
+                    <h3 class="text-xl font-bold text-amber-400 mb-3">Bamboo Craft</h3>
+                    <p class="text-neutral-300 text-sm mb-4">Kerajinan tangan mengutamakan fungsi dan estetika.</p>
+                    <ul class="text-sm text-neutral-400 space-y-2 grid grid-cols-2">
+                        <li>• Souvenir & Produk Custom</li>
+                        <li>• Anyaman & Dekorasi Interior</li>
+                        <li>• Produk Artistik Nusantara</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI VIDEO KARYA -->
+    <section id="galeri-video" class="py-20 bg-neutral-900 border-t border-neutral-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold tracking-tight text-amber-500 sm:text-4xl">Galeri Karya & Dokumentasi</h2>
@@ -165,11 +239,16 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="kontak" class="bg-neutral-950 text-neutral-400 py-12 border-t border-neutral-800 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-amber-500 font-semibold mb-2">Bumi Seni Nusantara</p>
-            <p class="text-sm">&copy; 2026 Bumi Seni Nusantara. Hak Cipta Dilindungi.</p>
+    <!-- Footer / Kontak -->
+    <footer id="kontak" class="bg-neutral-950 text-neutral-400 py-16 border-t border-neutral-800 text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl font-bold text-amber-500 mb-2">Bumi Seni Nusantara</h3>
+            <p class="text-sm tracking-wider uppercase text-neutral-400 mb-6">Crafting Nature Into Timeless Beauty</p>
+            <p class="text-neutral-300 mb-6">Mari berkolaborasi mewujudkan proyek impian Anda bersama tim profesional kami.</p>
+            <div class="text-xs text-neutral-500 space-y-1 mb-6">
+                <p>Founder: Bumi Munandar | Co-Founder: Yosi Falentina</p>
+            </div>
+            <p class="text-xs text-neutral-600">&copy; 2026 Bumi Seni Nusantara. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
