@@ -335,22 +335,21 @@
         </div>
     </section>
 
-    <!-- Galeri Karya & Proses Pengerjaan + Referensi Desain -->
+    <!-- Galeri Karya & Proses Pengerjaan (4 Video & 15 Foto Berdampingan + Filter Kategori) -->
     <section id="galeri" class="py-36 bg-neutral-900/30 border-t border-amber-900/30 px-8 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Dokumentasi & Portofolio</span>
                 <h2 class="text-5xl font-black text-white mb-4 tracking-tight">Galeri Karya & Proses</h2>
                 <div class="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-6 shadow-lg shadow-amber-500/50"></div>
-                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto mb-8">Dokumentasi proses pengerjaan di workshop, penataan ruang bambu, landscape artistik, ukiran, dan konstruksi berdampingan dalam tampilan desktop, dilengkapi inspirasi referensi desain.</p>
+                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto mb-8">Dokumentasi proses pengerjaan di workshop, penataan ruang bambu, landscape artistik, ukiran, dan konstruksi berdampingan dalam tampilan desktop.</p>
 
                 <!-- Tombol Filter Kategori -->
                 <div class="flex flex-wrap justify-center gap-3">
-                    <button type="button" data-filter="all" class="filter-btn active px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm transition cursor-pointer">Semua Karya (28)</button>
-                    <button type="button" data-filter="video" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Video Proses & Proyek (3)</button>
-                    <button type="button" data-filter="bambu" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Bambu, Furnitur & Kerajinan (20)</button>
-                    <button type="button" data-filter="ukiran" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Ukiran & Patung Artistik (8)</button>
-                    <button type="button" data-filter="referensi" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Referensi Desain (10)</button>
+                    <button type="button" data-filter="all" class="filter-btn active px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm transition cursor-pointer">Semua Karya (19)</button>
+                    <button type="button" data-filter="video" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Video Proses & Proyek (4)</button>
+                    <button type="button" data-filter="bambu" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Bambu, Furnitur & Kerajinan (10)</button>
+                    <button type="button" data-filter="ukiran" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Ukiran & Patung Artistik (9)</button>
                 </div>
             </div>
 
@@ -408,6 +407,25 @@
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
                             <p>Pastikan file <code class="text-amber-400">VID-20260726-WA0053.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
                             <a href="VID-20260726-WA0053.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 (Baru Ditambahkan) -->
+                <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
+                    <div class="relative">
+                        <video controls preload="metadata" playsinline class="gallery-media bg-black">
+                            <source src="video_1.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video.
+                        </video>
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proses</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-amber-300 font-semibold text-sm">Proses Ukiran Kayu Motif Naga</p>
+                        <p class="text-neutral-400 text-xs font-light mt-0.5">Pembentukan & perapihan ukiran di workshop</p>
+                        <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
+                            <p>Pastikan file <code class="text-amber-400">video_1.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
+                            <a href="video_1.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
                         </div>
                     </div>
                 </div>
@@ -546,126 +564,6 @@
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Detail anyaman bambu untuk partisi & panel</p>
                     </figcaption>
                 </figure>
-
-                <!-- Referensi 1 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_095736.jpg" data-lightbox-title="Referensi Pergola & Kisi Anyaman Bambu Teras">
-                    <div class="relative">
-                        <img src="IMG_20261119_095736.jpg" alt="Referensi Pergola & Kisi Anyaman Bambu Teras" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Pergola Kisi Bambu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi rangka kisi teras & area santai</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 2 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_095752.jpg" data-lightbox-title="Referensi Ruang Santai & Sofa Anyaman Bambu">
-                    <div class="relative">
-                        <img src="IMG_20261119_095752.jpg" alt="Referensi Ruang Santai & Sofa Anyaman Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Sofa & Lampu Anyaman</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi ruang santai bambu & pencahayaan</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 3 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_095842.jpg" data-lightbox-title="Referensi Interior & Furnitur Bambu Bernuansa Alam">
-                    <div class="relative">
-                        <img src="IMG_20261119_095842.jpg" alt="Referensi Interior & Furnitur Bambu Bernuansa Alam" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Ruang & Furnitur Bambu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi kisi jendela, kursi & meja bambu</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 4 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_095858.jpg" data-lightbox-title="Referensi Dapur, Kabinet & Meja Bundar Bambu">
-                    <div class="relative">
-                        <img src="IMG_20261119_095858.jpg" alt="Referensi Dapur, Kabinet & Meja Bundar Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Kabinet & Meja Bambu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi interior bambu & rak kisi</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 5 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_095933.jpg" data-lightbox-title="Referensi Lorong & Struktur Terowongan Bambu">
-                    <div class="relative">
-                        <img src="IMG_20261119_095933.jpg" alt="Referensi Lorong & Struktur Terowongan Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Lorong Bambu Artistik</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi jalur pejalan kaki & rangka bambu</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 6 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_100001.jpg" data-lightbox-title="Referensi Partisi Tiang Bambu & Plafon Anyaman">
-                    <div class="relative">
-                        <img src="IMG_20261119_100001.jpg" alt="Referensi Partisi Tiang Bambu & Plafon Anyaman" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Partisi & Plafon Bambu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi penyekat ruang & lampu gantung</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 7 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_100026.jpg" data-lightbox-title="Referensi Saung & Dinding Anyaman Bambu">
-                    <div class="relative">
-                        <img src="IMG_20261119_100026.jpg" alt="Referensi Saung & Dinding Anyaman Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Saung & Anyaman Bambu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi bangunan saung & kanopi teras</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 8 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_100039.jpg" data-lightbox-title="Referensi Gelas & Nampan Anyaman Bambu">
-                    <div class="relative">
-                        <img src="IMG_20261119_100039.jpg" alt="Referensi Gelas & Nampan Anyaman Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Kerajinan Gelas & Nampan</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi produk bambu & anyaman</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 9 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_100050.jpg" data-lightbox-title="Referensi Lampu Gantung Ruas Bambu & Tali Rami">
-                    <div class="relative">
-                        <img src="IMG_20261119_100050.jpg" alt="Referensi Lampu Gantung Ruas Bambu & Tali Rami" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Lampu Gantung Bambu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi lampu ruas bambu & tali rami</p>
-                    </figcaption>
-                </figure>
-
-                <!-- Referensi 10 -->
-                <figure data-category="bambu referensi" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG_20261119_100121.jpg" data-lightbox-title="Referensi Lampu Hias Kap Anyaman Bambu">
-                    <div class="relative">
-                        <img src="IMG_20261119_100121.jpg" alt="Referensi Lampu Hias Kap Anyaman Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-neutral-950/90 border border-amber-400/70 text-amber-300 text-[10px] font-extrabold tracking-wider uppercase shadow">Referensi</span>
-                    </div>
-                    <figcaption class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Referensi Lampu Kap Anyaman</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Inspirasi lampu dekoratif berbahan alami</p>
-                    </figcaption>
-                </figure>
             </div>
         </div>
     </section>
@@ -722,289 +620,4 @@
                     <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Restoran</span>
                     <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Café</span>
                     <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Developer</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Kawasan Wisata</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Pemerintah</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Sekolah</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Universitas</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Perusahaan</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Event Organizer</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Alur Kerja Proyek -->
-    <section id="alur-kerja" class="py-32 bg-neutral-900/30 border-t border-amber-900/30 px-8 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Proses Terarah</span>
-                <h2 class="text-5xl font-black text-white mb-4 tracking-tight">Alur Kerja Proyek</h2>
-                <div class="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-6 shadow-lg shadow-amber-500/50"></div>
-                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto">Pendampingan menyeluruh mulai dari diskusi awal hingga pemasangan akhir di lokasi proyek Anda.</p>
-            </div>
-
-            <div class="desktop-grid-4">
-                <div class="architectural-card p-8 rounded-3xl">
-                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 01</span>
-                    <h3 class="text-xl font-bold text-white mb-3">Konsultasi & Kebutuhan</h3>
-                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Diskusi tujuan ruang, tema kawasan, fungsi karya, serta karakter lokasi proyek Anda.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl">
-                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 02</span>
-                    <h3 class="text-xl font-bold text-white mb-3">Perancangan & Konsep</h3>
-                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Menyelaraskan pilihan material bambu, kayu, seni rupa, dan elemen landscape sesuai konsep proyek.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl">
-                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 03</span>
-                    <h3 class="text-xl font-bold text-white mb-3">Produksi Workshop</h3>
-                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Pengerjaan struktur, anyaman, furnitur, maupun ukiran oleh pengrajin dan seniman berpengalaman.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl">
-                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 04</span>
-                    <h3 class="text-xl font-bold text-white mb-3">Pemasangan & Penyelesaian</h3>
-                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Pengiriman, penataan, dan penyelesaian akhir di lokasi agar ruang siap digunakan dan berkesan.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Kontak & Form Konsultasi Cepat -->
-    <footer id="kontak" class="bg-[#030303] border-t border-amber-900/40 py-36 px-8 text-center relative overflow-hidden">
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-amber-600/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="mb-10 flex justify-center">
-                <div class="p-2.5 rounded-3xl bg-neutral-900 border border-amber-500/50 shadow-2xl">
-                    <img src="Logo BSN.jpg" alt="Logo Footer BSN" data-bsn-logo class="h-28 w-28 object-cover rounded-2xl">
-                </div>
-            </div>
-
-            <h2 class="text-6xl font-black text-amber-400 mb-6 tracking-tight">Mari Berkarya Bersama</h2>
-            <p class="text-neutral-300 mb-6 max-w-2xl mx-auto leading-relaxed font-light text-lg">
-                Apabila Anda sedang merencanakan pembangunan kawasan wisata, resort, villa, hotel, café, ruang publik, maupun proyek artistik lainnya, kami siap menjadi mitra yang menghadirkan solusi kreatif dari tahap konsep hingga penyelesaian.
-            </p>
-            <p class="text-neutral-400 mb-8 max-w-xl mx-auto leading-relaxed font-light text-base">
-                Bersama Bumi Seni Nusantara, mari menciptakan karya yang tidak hanya indah dipandang, tetapi juga memiliki nilai budaya, keberlanjutan, dan manfaat bagi masyarakat.
-            </p>
-
-            <!-- Info Wilayah Layanan & Jam Konsultasi -->
-            <div class="desktop-grid-2 max-w-3xl mx-auto mb-12 text-left" style="gap: 1.25rem;">
-                <div class="architectural-card rounded-3xl p-6">
-                    <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1.5">Wilayah Layanan Proyek</p>
-                    <p class="text-neutral-200 text-sm font-light">Jawa Barat (termasuk Tasikmalaya & sekitarnya) serta melayani proyek luar daerah sesuai kesepakatan.</p>
-                </div>
-                <div class="architectural-card rounded-3xl p-6">
-                    <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1.5">Jam Konsultasi & Workshop</p>
-                    <p class="text-neutral-200 text-sm font-light">Senin – Sabtu, 08.00 – 17.00 WIB (Respon cepat melalui WhatsApp & Email).</p>
-                </div>
-            </div>
-
-            <!-- Formulir Konsultasi Cepat ke WhatsApp -->
-            <form id="quickConsultForm" class="architectural-card rounded-3xl p-10 max-w-3xl mx-auto mb-12 text-left space-y-5">
-                <h3 class="text-2xl font-black text-amber-400 mb-2">Form Konsultasi & Permintaan Penawaran</h3>
-                <div class="desktop-grid-2" style="gap: 1.25rem;">
-                    <div>
-                        <label for="clientName" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Nama Anda</label>
-                        <input id="clientName" type="text" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
-                    </div>
-                    <div>
-                        <label for="clientLocation" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Lokasi Proyek / Kota</label>
-                        <input id="clientLocation" type="text" placeholder="Contoh: Tasikmalaya / Bandung / Bali" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
-                    </div>
-                </div>
-                <div>
-                    <label for="projectService" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Jenis Layanan / Proyek</label>
-                    <select id="projectService" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white focus:outline-none focus:border-amber-400">
-                        <option value="Bamboo Construction (Gazebo, Saung, Pergola, Struktur Bambu)">Bamboo Construction (Gazebo, Saung, Pergola, Struktur Bambu)</option>
-                        <option value="Bamboo Furniture & Interior">Bamboo Furniture & Interior</option>
-                        <option value="Seni & Dekorasi Artistik (Ukiran, Patung, Relief, Instalasi)">Seni & Dekorasi Artistik (Ukiran, Patung, Relief, Instalasi)</option>
-                        <option value="Landscape & Garden (Taman, Elemen Air, Spot Wisata)">Landscape & Garden (Taman, Elemen Air, Spot Wisata)</option>
-                        <option value="Bamboo Craft & Produk Custom">Bamboo Craft & Produk Custom</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="projectNotes" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Deskripsi Singkat Kebutuhan</label>
-                    <textarea id="projectNotes" rows="3" placeholder="Ceritakan gambaran area, estimasi ukuran, atau rencana waktu pengerjaan..." class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"></textarea>
-                </div>
-                <div class="pt-2 flex justify-end">
-                    <button type="submit" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
-                        Kirim Detail ke WhatsApp
-                    </button>
-                </div>
-            </form>
-
-            <!-- Tombol Kontak (WhatsApp, Email & Salin Email) -->
-            <div class="flex flex-wrap justify-center items-center gap-4 mb-16">
-                <a href="https://wa.me/628132207215?text=Halo%20Bumi%20Seni%20Nusantara,%20saya%20tertarik%20dengan%20layanan%20Anda." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold px-8 py-4 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 gap-3 border border-emerald-400/50 text-base">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    <span>Hubungi via WhatsApp</span>
-                </a>
-                <a href="mailto:bumiseninusantara@gmail.com" class="inline-flex items-center justify-center bg-neutral-900 hover:bg-neutral-800 text-amber-400 font-bold px-8 py-4 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 gap-3 border border-amber-500/40 text-base">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.713v13.426h24v-13.426l-12 9.713z"/></svg>
-                    <span>bumiseninusantara@gmail.com</span>
-                </a>
-                <button id="copyEmailBtn" type="button" class="inline-flex items-center justify-center bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-amber-300 font-semibold px-6 py-4 rounded-2xl border border-amber-700/40 transition-all duration-300 text-sm cursor-pointer">
-                    <span id="copyEmailLabel">Salin Email</span>
-                </button>
-            </div>
-
-            <div>
-                <h3 class="text-2xl font-black text-amber-500 mb-2 tracking-[0.25em]">BUMI SENI NUSANTARA</h3>
-                <p class="text-xs tracking-[0.35em] uppercase text-amber-200/60 mb-6 font-semibold">Crafting Nature Into Timeless Beauty</p>
-                <p class="text-xs text-neutral-600">&copy; 2026 Bumi Seni Nusantara. Hak Cipta Dilindungi.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal Lightbox Foto -->
-    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
-        <div class="relative max-w-4xl w-full architectural-card rounded-3xl p-6">
-            <button id="closeLightboxBtn" type="button" aria-label="Tutup pratinjau foto" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-neutral-900/90 border border-amber-500/50 text-amber-400 hover:bg-neutral-800 flex items-center justify-center text-xl font-bold cursor-pointer">&times;</button>
-            <img id="lightboxImg" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-2xl bg-black mx-auto">
-            <p id="lightboxTitle" class="text-center text-amber-300 font-semibold text-base mt-4"></p>
-        </div>
-    </div>
-
-    <script>
-        (function () {
-            // Fallback otomatis jika ekstensi/huruf besar-kecil file logo berbeda di repositori
-            const fallbackCandidates = ['logo bsn.jpg', 'Logo BSN.JPG', 'logo-bsn.jpg'];
-            document.querySelectorAll('img[data-bsn-logo]').forEach((img) => {
-                let idx = 0;
-                img.addEventListener('error', () => {
-                    if (idx < fallbackCandidates.length) {
-                        img.src = fallbackCandidates[idx++];
-                    } else {
-                        img.style.display = 'none';
-                    }
-                });
-            });
-
-            // Penanganan error pemutaran video
-            document.querySelectorAll('video').forEach((vid) => {
-                const source = vid.querySelector('source');
-                const cardEl = vid.closest('.architectural-card');
-                const fallbackEl = cardEl ? cardEl.querySelector('[data-video-fallback]') : null;
-                const showFallback = () => {
-                    if (fallbackEl) fallbackEl.classList.remove('hidden');
-                };
-                vid.addEventListener('error', showFallback);
-                if (source) source.addEventListener('error', showFallback);
-            });
-
-            // Penanganan error pemuatan foto galeri + tautan cek file langsung
-            document.querySelectorAll('figure[data-lightbox-src] img').forEach((img) => {
-                const figureEl = img.closest('figure');
-                const srcFile = figureEl ? (figureEl.getAttribute('data-lightbox-src') || '') : '';
-                img.addEventListener('error', () => {
-                    img.style.display = 'none';
-                    const caption = figureEl ? figureEl.querySelector('figcaption') : null;
-                    if (caption && srcFile && !caption.querySelector('[data-img-fallback]')) {
-                        const box = document.createElement('div');
-                        box.setAttribute('data-img-fallback', '1');
-                        box.className = 'text-amber-300/90 text-[11px] mt-1.5 space-y-1';
-                        box.innerHTML = `<p>File <code class="text-amber-400">${srcFile}</code> belum ditemukan sejajar dengan <code class="text-amber-400">index.html</code>.</p><a href="${srcFile}" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Cek URL file langsung</a>`;
-                        caption.appendChild(box);
-                    }
-                });
-            });
-
-            // Filter kategori galeri
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-
-            filterButtons.forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    const selected = btn.getAttribute('data-filter') || 'all';
-                    filterButtons.forEach((b) => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    galleryItems.forEach((item) => {
-                        const cats = (item.getAttribute('data-category') || '').split(/\s+/);
-                        if (selected === 'all' || cats.includes(selected)) {
-                            item.style.display = '';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Lightbox untuk melihat foto lebih besar
-            const modal = document.getElementById('lightboxModal');
-            const modalImg = document.getElementById('lightboxImg');
-            const modalTitle = document.getElementById('lightboxTitle');
-            const closeModalBtn = document.getElementById('closeLightboxBtn');
-
-            document.querySelectorAll('figure[data-lightbox-src]').forEach((item) => {
-                item.addEventListener('click', () => {
-                    if (!modal || !modalImg || !modalTitle) return;
-                    modalImg.src = item.getAttribute('data-lightbox-src') || '';
-                    const title = item.getAttribute('data-lightbox-title') || '';
-                    modalImg.alt = title;
-                    modalTitle.textContent = title;
-                    modal.classList.remove('hidden');
-                    modal.classList.add('flex');
-                });
-            });
-
-            function closeModal() {
-                if (!modal) return;
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
-
-            if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) closeModal();
-                });
-            }
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') closeModal();
-            });
-
-            // Kirim ringkasan konsultasi ke WhatsApp
-            const consultForm = document.getElementById('quickConsultForm');
-            if (consultForm) {
-                consultForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const name = (document.getElementById('clientName')?.value || '').trim();
-                    const location = (document.getElementById('clientLocation')?.value || '').trim();
-                    const service = (document.getElementById('projectService')?.value || '').trim();
-                    const notes = (document.getElementById('projectNotes')?.value || '').trim();
-
-                    const lines = [
-                        'Halo Bumi Seni Nusantara, saya ingin berkonsultasi mengenai proyek:',
-                        `• Nama: ${name || '-'}`,
-                        `• Lokasi Proyek: ${location || '-'}`,
-                        `• Layanan: ${service}`,
-                        `• Catatan: ${notes || '-'}`
-                    ];
-                    const waUrl = `https://wa.me/628132207215?text=${encodeURIComponent(lines.join('\n'))}`;
-                    window.open(waUrl, '_blank', 'noopener,noreferrer');
-                });
-            }
-
-            // Salin alamat email dengan umpan balik status
-            const copyBtn = document.getElementById('copyEmailBtn');
-            const copyLabel = document.getElementById('copyEmailLabel');
-            const emailAddress = 'bumiseninusantara@gmail.com';
-
-            if (copyBtn && copyLabel) {
-                copyBtn.addEventListener('click', async () => {
-                    try {
-                        await navigator.clipboard.writeText(emailAddress);
-                        copyLabel.textContent = 'Tersalin ✓';
-                        setTimeout(() => {
-                            copyLabel.textContent = 'Salin Email';
-                        }, 2000);
-                    } catch (_) {
-                        copyLabel.textContent = emailAddress;
-                    }
-                });
-            }
-        })();
-    </script>
-
-</body>
-</html>
+                    <span class="px-6 py-
