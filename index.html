@@ -335,7 +335,7 @@
         </div>
     </section>
 
-    <!-- Galeri Karya & Proses Pengerjaan (3 Video & 12 Foto Berdampingan + Filter Mulus) -->
+    <!-- Galeri Karya & Proses Pengerjaan (3 Video & 12 Foto Berdampingan + Filter Kategori) -->
     <section id="galeri" class="py-36 bg-neutral-900/30 border-t border-amber-900/30 px-8 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
@@ -349,12 +349,11 @@
                     <button type="button" data-filter="all" class="filter-btn active px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm transition cursor-pointer">Semua Karya (15)</button>
                     <button type="button" data-filter="video" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Video Proses & Proyek (3)</button>
                     <button type="button" data-filter="bambu" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Bambu, Furnitur & Kerajinan (7)</button>
-                    <button type="button" data-filter="ukiran" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Ukiran & Patung Artistik (5)</button>
+                    <button type="button" data-filter="ukiran" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Ukiran & Patung Artistik (8)</button>
                 </div>
             </div>
 
-            <!-- Kontainer Galeri Gaya Desktop -->
-            <div id="galleryContainer" class="desktop-grid-4">
+            <div class="desktop-grid-4">
                 <!-- Video 1 -->
                 <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
@@ -635,9 +634,21 @@
             <p class="text-neutral-300 mb-6 max-w-2xl mx-auto leading-relaxed font-light text-lg">
                 Apabila Anda sedang merencanakan pembangunan kawasan wisata, resort, villa, hotel, café, ruang publik, maupun proyek artistik lainnya, kami siap menjadi mitra yang menghadirkan solusi kreatif dari tahap konsep hingga penyelesaian.
             </p>
-            <p class="text-neutral-400 mb-12 max-w-xl mx-auto leading-relaxed font-light text-base">
+            <p class="text-neutral-400 mb-8 max-w-xl mx-auto leading-relaxed font-light text-base">
                 Bersama Bumi Seni Nusantara, mari menciptakan karya yang tidak hanya indah dipandang, tetapi juga memiliki nilai budaya, keberlanjutan, dan manfaat bagi masyarakat.
             </p>
+
+            <!-- Info Wilayah Layanan & Jam Konsultasi -->
+            <div class="desktop-grid-2 max-w-3xl mx-auto mb-12 text-left" style="gap: 1.25rem;">
+                <div class="architectural-card rounded-3xl p-6">
+                    <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1.5">Wilayah Layanan Proyek</p>
+                    <p class="text-neutral-200 text-sm font-light">Jawa Barat (termasuk Tasikmalaya & sekitarnya) serta melayani proyek luar daerah sesuai kesepakatan.</p>
+                </div>
+                <div class="architectural-card rounded-3xl p-6">
+                    <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1.5">Jam Konsultasi & Workshop</p>
+                    <p class="text-neutral-200 text-sm font-light">Senin – Sabtu, 08.00 – 17.00 WIB (Respon cepat melalui WhatsApp & Email).</p>
+                </div>
+            </div>
 
             <!-- Formulir Konsultasi Cepat ke WhatsApp -->
             <form id="quickConsultForm" class="architectural-card rounded-3xl p-10 max-w-3xl mx-auto mb-12 text-left space-y-5">
@@ -649,7 +660,7 @@
                     </div>
                     <div>
                         <label for="clientLocation" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Lokasi Proyek / Kota</label>
-                        <input id="clientLocation" type="text" placeholder="Contoh: Bandung / Tasikmalaya / Bali" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
+                        <input id="clientLocation" type="text" placeholder="Contoh: Tasikmalaya / Bandung / Bali" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
                     </div>
                 </div>
                 <div>
