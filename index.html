@@ -411,11 +411,11 @@
                     </div>
                 </div>
 
-                <!-- Video 4 (Baru Ditambahkan) -->
+                <!-- Video 4 -->
                 <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
-                        <video controls preload="metadata" playsinline class="gallery-media bg-black">
-                            <source src="video_1.mp4" type="video/mp4">
+                        <video controls preload="metadata" playsinline data-video-fallbacks="video_1.mp4" class="gallery-media bg-black">
+                            <source src="vid.jpg.mp4" type="video/mp4">
                             Browser Anda tidak mendukung pemutaran video.
                         </video>
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proses</span>
@@ -424,8 +424,8 @@
                         <p class="text-amber-300 font-semibold text-sm">Proses Ukiran Kayu Motif Naga</p>
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Pembentukan & perapihan ukiran di workshop</p>
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
-                            <p>Pastikan file <code class="text-amber-400">video_1.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
-                            <a href="video_1.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
+                            <p>Pastikan file <code class="text-amber-400">vid.jpg.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
+                            <a href="vid.jpg.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
                         </div>
                     </div>
                 </div>
@@ -589,35 +589,4 @@
             <!-- Nilai Perusahaan (Values) -->
             <div class="desktop-grid-5 mb-20">
                 <div class="architectural-card p-8 rounded-3xl text-center">
-                    <h3 class="text-amber-400 font-black text-xl mb-3">Integrity</h3>
-                    <p class="text-neutral-300 text-sm leading-relaxed font-light">Kami menjaga kepercayaan melalui kejujuran, komitmen, dan tanggung jawab.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl text-center">
-                    <h3 class="text-amber-400 font-black text-xl mb-3">Quality</h3>
-                    <p class="text-neutral-300 text-sm leading-relaxed font-light">Kami percaya kualitas adalah investasi jangka panjang.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl text-center">
-                    <h3 class="text-amber-400 font-black text-xl mb-3">Creativity</h3>
-                    <p class="text-neutral-300 text-sm leading-relaxed font-light">Kami menghadirkan solusi desain yang unik dan artistik.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl text-center">
-                    <h3 class="text-amber-400 font-black text-xl mb-3">Sustainability</h3>
-                    <p class="text-neutral-300 text-sm leading-relaxed font-light">Kami mengoptimalkan bambu sebagai material ramah lingkungan yang memiliki masa depan.</p>
-                </div>
-                <div class="architectural-card p-8 rounded-3xl text-center">
-                    <h3 class="text-amber-400 font-black text-xl mb-3">Community Empowerment</h3>
-                    <p class="text-neutral-300 text-sm leading-relaxed font-light">Setiap proyek menjadi bagian dari upaya pemberdayaan masyarakat dan pelestarian keterampilan para pengrajin lokal.</p>
-                </div>
-            </div>
-
-            <!-- Siapa Klien Kami -->
-            <div id="klien" class="architectural-card rounded-3xl p-16 text-center">
-                <h3 class="text-4xl font-black text-amber-400 mb-8 tracking-tight">Siapa Klien Kami</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Hotel</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Resort</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Villa</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Restoran</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Café</span>
-                    <span class="px-6 py-3 rounded-2xl bg-neutral-900/90 border border-amber-600/40 text-neutral-100 text-sm font-semibold tracking-wide shadow-lg">Developer</span>
-                    <span class="px-6 py-
+                    <h3 class="text-amber-40
