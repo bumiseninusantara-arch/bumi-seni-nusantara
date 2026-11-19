@@ -73,6 +73,12 @@
             object-fit: cover;
             display: block;
         }
+        .filter-btn.active {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #0a0a0a;
+            border-color: #fbbf24;
+            font-weight: 800;
+        }
         /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #030303; }
@@ -99,14 +105,14 @@
                 </div>
             </a>
 
-            <nav class="flex space-x-7 text-sm font-medium text-neutral-300">
+            <nav class="flex space-x-6 text-sm font-medium text-neutral-300">
                 <a href="#beranda" class="hover:text-amber-400 transition">Beranda</a>
                 <a href="#tentang" class="hover:text-amber-400 transition">Tentang Kami</a>
                 <a href="#visi-misi" class="hover:text-amber-400 transition">Visi Misi</a>
                 <a href="#layanan" class="hover:text-amber-400 transition">Layanan</a>
                 <a href="#galeri" class="hover:text-amber-400 transition">Galeri</a>
                 <a href="#mengapa" class="hover:text-amber-400 transition">Mengapa Kami</a>
-                <a href="#klien" class="hover:text-amber-400 transition">Klien</a>
+                <a href="#alur-kerja" class="hover:text-amber-400 transition">Alur Kerja</a>
                 <a href="#kontak" class="hover:text-amber-400 transition">Kontak</a>
             </nav>
         </div>
@@ -151,7 +157,7 @@
             
             <div class="flex justify-center gap-4">
                 <a href="#galeri" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-bold px-10 py-4 rounded-2xl transition shadow-2xl shadow-amber-600/30 hover:scale-105 duration-300">Lihat Galeri Karya</a>
-                <a href="#kontak" class="bg-neutral-900/90 hover:bg-neutral-800 border border-amber-700/50 text-neutral-200 font-semibold px-10 py-4 rounded-2xl transition backdrop-blur-md shadow-xl">Hubungi Kami</a>
+                <a href="#kontak" class="bg-neutral-900/90 hover:bg-neutral-800 border border-amber-700/50 text-neutral-200 font-semibold px-10 py-4 rounded-2xl transition backdrop-blur-md shadow-xl">Konsultasi Proyek</a>
             </div>
         </div>
     </section>
@@ -329,19 +335,27 @@
         </div>
     </section>
 
-    <!-- Galeri Karya & Proses Pengerjaan (3 Video & 12 Foto Berdampingan) -->
+    <!-- Galeri Karya & Proses Pengerjaan (3 Video & 12 Foto Berdampingan + Filter Kategori) -->
     <section id="galeri" class="py-36 bg-neutral-900/30 border-t border-amber-900/30 px-8 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Dokumentasi & Portofolio</span>
                 <h2 class="text-5xl font-black text-white mb-4 tracking-tight">Galeri Karya & Proses</h2>
                 <div class="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-6 shadow-lg shadow-amber-500/50"></div>
-                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto">Dokumentasi proses pengerjaan di workshop, penataan ruang bambu, landscape artistik, ukiran, dan konstruksi berdampingan dalam tampilan desktop.</p>
+                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto mb-8">Dokumentasi proses pengerjaan di workshop, penataan ruang bambu, landscape artistik, ukiran, dan konstruksi berdampingan dalam tampilan desktop.</p>
+
+                <!-- Tombol Filter Kategori -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button type="button" data-filter="all" class="filter-btn active px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm transition cursor-pointer">Semua Karya (15)</button>
+                    <button type="button" data-filter="video" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Video Proses & Proyek (3)</button>
+                    <button type="button" data-filter="bambu" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Bambu, Furnitur & Kerajinan (7)</button>
+                    <button type="button" data-filter="ukiran" class="filter-btn px-6 py-2.5 rounded-2xl bg-neutral-900 border border-amber-600/40 text-amber-300 text-sm hover:bg-neutral-800 transition cursor-pointer">Ukiran & Patung Artistik (5)</button>
+                </div>
             </div>
 
             <div class="desktop-grid-4">
                 <!-- Video 1 -->
-                <div class="architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
                         <video controls preload="metadata" playsinline class="gallery-media bg-black">
                             <source src="VID-20261102-WA0074.mp4" type="video/mp4">
@@ -360,7 +374,7 @@
                 </div>
 
                 <!-- Video 2 -->
-                <div class="architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
                         <video controls preload="metadata" playsinline class="gallery-media bg-black">
                             <source src="VID-20261102-WA0076.mp4" type="video/mp4">
@@ -379,7 +393,7 @@
                 </div>
 
                 <!-- Video 3 -->
-                <div class="architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
                         <video controls preload="metadata" playsinline class="gallery-media bg-black">
                             <source src="VID-20260726-WA0053.mp4" type="video/mp4">
@@ -398,7 +412,7 @@
                 </div>
 
                 <!-- Foto 1 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261117-WA0002.jpg" data-lightbox-title="Karya Anyaman Bambu Motif Bunga & Daun">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261117-WA0002.jpg" data-lightbox-title="Karya Anyaman Bambu Motif Bunga & Daun">
                     <img src="IMG-20261117-WA0002.jpg" alt="Karya Anyaman Bambu Motif Bunga & Daun" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Anyaman Bambu Artistik</p>
@@ -407,7 +421,7 @@
                 </figure>
 
                 <!-- Foto 2 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0057.jpg" data-lightbox-title="Karya Ukiran Kayu & Akar Artistik">
+                <figure data-category="ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0057.jpg" data-lightbox-title="Karya Ukiran Kayu & Akar Artistik">
                     <img src="IMG-20261102-WA0057.jpg" alt="Karya Ukiran Kayu & Akar Artistik" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Ukiran Kayu & Akar</p>
@@ -416,7 +430,7 @@
                 </figure>
 
                 <!-- Foto 3 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0017.jpg" data-lightbox-title="Patung Figur Anyaman & Serat Bambu">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0017.jpg" data-lightbox-title="Patung Figur Anyaman & Serat Bambu">
                     <img src="IMG-20260726-WA0017.jpg" alt="Patung Figur Anyaman & Serat Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Patung Figur Bambu</p>
@@ -425,7 +439,7 @@
                 </figure>
 
                 <!-- Foto 4 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0022.jpg" data-lightbox-title="Patung Ukiran Elang & Elemen Artistik">
+                <figure data-category="ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0022.jpg" data-lightbox-title="Patung Ukiran Elang & Elemen Artistik">
                     <img src="IMG-20260726-WA0022.jpg" alt="Patung Ukiran Elang & Elemen Artistik" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Ukiran Figur Satwa</p>
@@ -434,7 +448,7 @@
                 </figure>
 
                 <!-- Foto 5 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0036.jpg" data-lightbox-title="Ukiran Relief & Pilar Motif Naga">
+                <figure data-category="ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0036.jpg" data-lightbox-title="Ukiran Relief & Pilar Motif Naga">
                     <img src="IMG-20260726-WA0036.jpg" alt="Ukiran Relief & Pilar Motif Naga" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Ukiran Motif Naga</p>
@@ -443,7 +457,7 @@
                 </figure>
 
                 <!-- Foto 6 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0021.jpg" data-lightbox-title="Konstruksi Dinding, Anyaman & Furnitur Bambu">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0021.jpg" data-lightbox-title="Konstruksi Dinding, Anyaman & Furnitur Bambu">
                     <img src="IMG-20260726-WA0021.jpg" alt="Konstruksi Dinding, Anyaman & Furnitur Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Fasad & Furnitur Bambu</p>
@@ -452,7 +466,7 @@
                 </figure>
 
                 <!-- Foto 7 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0037.jpg" data-lightbox-title="Bangunan Arsitektural Berstruktur Bambu">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0037.jpg" data-lightbox-title="Bangunan Arsitektural Berstruktur Bambu">
                     <img src="IMG-20260726-WA0037.jpg" alt="Bangunan Arsitektural Berstruktur Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Bangunan Tematik Bambu</p>
@@ -461,7 +475,7 @@
                 </figure>
 
                 <!-- Foto 8 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0034.jpg" data-lightbox-title="Gerbang & Elemen Interior Bambu">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0034.jpg" data-lightbox-title="Gerbang & Elemen Interior Bambu">
                     <img src="IMG-20260726-WA0034.jpg" alt="Gerbang & Elemen Interior Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Gerbang & Bingkai Bambu</p>
@@ -470,7 +484,7 @@
                 </figure>
 
                 <!-- Foto 9 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="images.jpeg" data-lightbox-title="Ruang Bambu, Partisi Kisi & Furnitur Bambu">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="images.jpeg" data-lightbox-title="Ruang Bambu, Partisi Kisi & Furnitur Bambu">
                     <img src="images.jpeg" alt="Ruang Bambu, Partisi Kisi & Furnitur Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Ruang & Furnitur Bambu</p>
@@ -479,7 +493,7 @@
                 </figure>
 
                 <!-- Foto 10 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0031.jpg" data-lightbox-title="Produk Kerajinan Sangkar di Workshop">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0031.jpg" data-lightbox-title="Produk Kerajinan Sangkar di Workshop">
                     <img src="IMG-20260726-WA0031.jpg" alt="Produk Kerajinan Sangkar di Workshop" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Kerajinan Sangkar</p>
@@ -488,7 +502,7 @@
                 </figure>
 
                 <!-- Foto 11 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0039.jpg" data-lightbox-title="Struktur Saung Bambu & Lampu Dekoratif">
+                <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0039.jpg" data-lightbox-title="Struktur Saung Bambu & Lampu Dekoratif">
                     <img src="IMG-20261102-WA0039.jpg" alt="Struktur Saung Bambu & Lampu Dekoratif" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Struktur Bambu & Lampu</p>
@@ -497,7 +511,7 @@
                 </figure>
 
                 <!-- Foto 12 -->
-                <figure class="architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0045.jpg" data-lightbox-title="Patung Ukiran Figur Tradisional di Workshop">
+                <figure data-category="ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0045.jpg" data-lightbox-title="Patung Ukiran Figur Tradisional di Workshop">
                     <img src="IMG-20261102-WA0045.jpg" alt="Patung Ukiran Figur Tradisional di Workshop" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Patung Ukiran Figur</p>
@@ -571,10 +585,45 @@
         </div>
     </section>
 
-    <!-- Footer / Kontak -->
+    <!-- Alur Kerja Proyek -->
+    <section id="alur-kerja" class="py-32 bg-neutral-900/30 border-t border-amber-900/30 px-8 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Proses Terarah</span>
+                <h2 class="text-5xl font-black text-white mb-4 tracking-tight">Alur Kerja Proyek</h2>
+                <div class="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-6 shadow-lg shadow-amber-500/50"></div>
+                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto">Pendampingan menyeluruh mulai dari diskusi awal hingga pemasangan akhir di lokasi proyek Anda.</p>
+            </div>
+
+            <div class="desktop-grid-4">
+                <div class="architectural-card p-8 rounded-3xl">
+                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 01</span>
+                    <h3 class="text-xl font-bold text-white mb-3">Konsultasi & Kebutuhan</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Diskusi tujuan ruang, tema kawasan, fungsi karya, serta karakter lokasi proyek Anda.</p>
+                </div>
+                <div class="architectural-card p-8 rounded-3xl">
+                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 02</span>
+                    <h3 class="text-xl font-bold text-white mb-3">Perancangan & Konsep</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Menyelaraskan pilihan material bambu, kayu, seni rupa, dan elemen landscape sesuai konsep proyek.</p>
+                </div>
+                <div class="architectural-card p-8 rounded-3xl">
+                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 03</span>
+                    <h3 class="text-xl font-bold text-white mb-3">Produksi Workshop</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Pengerjaan struktur, anyaman, furnitur, maupun ukiran oleh pengrajin dan seniman berpengalaman.</p>
+                </div>
+                <div class="architectural-card p-8 rounded-3xl">
+                    <span class="inline-block text-xs font-black tracking-widest uppercase text-amber-400 mb-3">Tahap 04</span>
+                    <h3 class="text-xl font-bold text-white mb-3">Pemasangan & Penyelesaian</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Pengiriman, penataan, dan penyelesaian akhir di lokasi agar ruang siap digunakan dan berkesan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Kontak & Form Konsultasi Cepat -->
     <footer id="kontak" class="bg-[#030303] border-t border-amber-900/40 py-36 px-8 text-center relative overflow-hidden">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-amber-600/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto relative z-10">
+        <div class="max-w-5xl mx-auto relative z-10">
             <div class="mb-10 flex justify-center">
                 <div class="p-2.5 rounded-3xl bg-neutral-900 border border-amber-500/50 shadow-2xl">
                     <img src="Logo BSN.jpg" alt="Logo Footer BSN" data-bsn-logo class="h-28 w-28 object-cover rounded-2xl">
@@ -585,9 +634,43 @@
             <p class="text-neutral-300 mb-6 max-w-2xl mx-auto leading-relaxed font-light text-lg">
                 Apabila Anda sedang merencanakan pembangunan kawasan wisata, resort, villa, hotel, café, ruang publik, maupun proyek artistik lainnya, kami siap menjadi mitra yang menghadirkan solusi kreatif dari tahap konsep hingga penyelesaian.
             </p>
-            <p class="text-neutral-400 mb-10 max-w-xl mx-auto leading-relaxed font-light text-base">
+            <p class="text-neutral-400 mb-12 max-w-xl mx-auto leading-relaxed font-light text-base">
                 Bersama Bumi Seni Nusantara, mari menciptakan karya yang tidak hanya indah dipandang, tetapi juga memiliki nilai budaya, keberlanjutan, dan manfaat bagi masyarakat.
             </p>
+
+            <!-- Formulir Konsultasi Cepat ke WhatsApp -->
+            <form id="quickConsultForm" class="architectural-card rounded-3xl p-10 max-w-3xl mx-auto mb-12 text-left space-y-5">
+                <h3 class="text-2xl font-black text-amber-400 mb-2">Form Konsultasi & Permintaan Penawaran</h3>
+                <div class="desktop-grid-2" style="gap: 1.25rem;">
+                    <div>
+                        <label for="clientName" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Nama Anda</label>
+                        <input id="clientName" type="text" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label for="clientLocation" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Lokasi Proyek / Kota</label>
+                        <input id="clientLocation" type="text" placeholder="Contoh: Bandung / Tasikmalaya / Bali" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
+                    </div>
+                </div>
+                <div>
+                    <label for="projectService" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Jenis Layanan / Proyek</label>
+                    <select id="projectService" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white focus:outline-none focus:border-amber-400">
+                        <option value="Bamboo Construction (Gazebo, Saung, Pergola, Struktur Bambu)">Bamboo Construction (Gazebo, Saung, Pergola, Struktur Bambu)</option>
+                        <option value="Bamboo Furniture & Interior">Bamboo Furniture & Interior</option>
+                        <option value="Seni & Dekorasi Artistik (Ukiran, Patung, Relief, Instalasi)">Seni & Dekorasi Artistik (Ukiran, Patung, Relief, Instalasi)</option>
+                        <option value="Landscape & Garden (Taman, Elemen Air, Spot Wisata)">Landscape & Garden (Taman, Elemen Air, Spot Wisata)</option>
+                        <option value="Bamboo Craft & Produk Custom">Bamboo Craft & Produk Custom</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="projectNotes" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Deskripsi Singkat Kebutuhan</label>
+                    <textarea id="projectNotes" rows="3" placeholder="Ceritakan gambaran area, estimasi ukuran, atau rencana waktu pengerjaan..." class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400"></textarea>
+                </div>
+                <div class="pt-2 flex justify-end">
+                    <button type="submit" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                        Kirim Detail ke WhatsApp
+                    </button>
+                </div>
+            </form>
 
             <!-- Tombol Kontak (WhatsApp, Email & Salin Email) -->
             <div class="flex flex-wrap justify-center items-center gap-4 mb-16">
@@ -599,7 +682,7 @@
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.713v13.426h24v-13.426l-12 9.713z"/></svg>
                     <span>bumiseninusantara@gmail.com</span>
                 </a>
-                <button id="copyEmailBtn" type="button" class="inline-flex items-center justify-center bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-amber-300 font-semibold px-6 py-4 rounded-2xl border border-amber-700/40 transition-all duration-300 text-sm">
+                <button id="copyEmailBtn" type="button" class="inline-flex items-center justify-center bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-amber-300 font-semibold px-6 py-4 rounded-2xl border border-amber-700/40 transition-all duration-300 text-sm cursor-pointer">
                     <span id="copyEmailLabel">Salin Email</span>
                 </button>
             </div>
@@ -615,7 +698,7 @@
     <!-- Modal Lightbox Foto -->
     <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
         <div class="relative max-w-4xl w-full architectural-card rounded-3xl p-6">
-            <button id="closeLightboxBtn" type="button" aria-label="Tutup pratinjau foto" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-neutral-900/90 border border-amber-500/50 text-amber-400 hover:bg-neutral-800 flex items-center justify-center text-xl font-bold">&times;</button>
+            <button id="closeLightboxBtn" type="button" aria-label="Tutup pratinjau foto" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-neutral-900/90 border border-amber-500/50 text-amber-400 hover:bg-neutral-800 flex items-center justify-center text-xl font-bold cursor-pointer">&times;</button>
             <img id="lightboxImg" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-2xl bg-black mx-auto">
             <p id="lightboxTitle" class="text-center text-amber-300 font-semibold text-base mt-4"></p>
         </div>
@@ -646,6 +729,27 @@
                 };
                 vid.addEventListener('error', showFallback);
                 if (source) source.addEventListener('error', showFallback);
+            });
+
+            // Filter kategori galeri
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const selected = btn.getAttribute('data-filter') || 'all';
+                    filterButtons.forEach((b) => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    galleryItems.forEach((item) => {
+                        const cats = (item.getAttribute('data-category') || '').split(/\s+/);
+                        if (selected === 'all' || cats.includes(selected)) {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
             });
 
             // Lightbox untuk melihat foto lebih besar
@@ -681,6 +785,28 @@
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') closeModal();
             });
+
+            // Kirim ringkasan konsultasi ke WhatsApp
+            const consultForm = document.getElementById('quickConsultForm');
+            if (consultForm) {
+                consultForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = (document.getElementById('clientName')?.value || '').trim();
+                    const location = (document.getElementById('clientLocation')?.value || '').trim();
+                    const service = (document.getElementById('projectService')?.value || '').trim();
+                    const notes = (document.getElementById('projectNotes')?.value || '').trim();
+
+                    const lines = [
+                        'Halo Bumi Seni Nusantara, saya ingin berkonsultasi mengenai proyek:',
+                        `• Nama: ${name || '-'}`,
+                        `• Lokasi Proyek: ${location || '-'}`,
+                        `• Layanan: ${service}`,
+                        `• Catatan: ${notes || '-'}`
+                    ];
+                    const waUrl = `https://wa.me/628132207215?text=${encodeURIComponent(lines.join('\n'))}`;
+                    window.open(waUrl, '_blank', 'noopener,noreferrer');
+                });
+            }
 
             // Salin alamat email dengan umpan balik status
             const copyBtn = document.getElementById('copyEmailBtn');
