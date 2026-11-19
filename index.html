@@ -843,6 +843,23 @@
                 if (source) source.addEventListener('error', showFallback);
             });
 
+            // Penanganan error pemuatan foto galeri + tautan cek file langsung
+            document.querySelectorAll('figure[data-lightbox-src] img').forEach((img) => {
+                const figureEl = img.closest('figure');
+                const srcFile = figureEl ? (figureEl.getAttribute('data-lightbox-src') || '') : '';
+                img.addEventListener('error', () => {
+                    img.style.display = 'none';
+                    const caption = figureEl ? figureEl.querySelector('figcaption') : null;
+                    if (caption && srcFile && !caption.querySelector('[data-img-fallback]')) {
+                        const box = document.createElement('div');
+                        box.setAttribute('data-img-fallback', '1');
+                        box.className = 'text-amber-300/90 text-[11px] mt-1.5 space-y-1';
+                        box.innerHTML = `<p>File <code class="text-amber-400">${srcFile}</code> belum ditemukan sejajar dengan <code class="text-amber-400">index.html</code>.</p><a href="${srcFile}" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Cek URL file langsung</a>`;
+                        caption.appendChild(box);
+                    }
+                });
+            });
+
             // Filter kategori galeri
             const filterButtons = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
