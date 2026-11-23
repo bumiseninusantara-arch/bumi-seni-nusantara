@@ -593,7 +593,7 @@
 
                 <!-- Foto 16 (Baru) -->
                 <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0067.jpg" data-lightbox-title="Patung Figur Anyaman Bambu Berdudukan Segi Enam">
-                    <img src="IMG-20261102-WA0067.jpg" alt="Patung Figur Anyaman Bambu Berdudukan Segi Enam" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
+                    <img src="IMG-20261102-WA0067.jpg" alt="Patung Figur Anyaman Bambu Berdudukan Segi Enam" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Patung Anyaman Tradisional</p>
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Karya figur anyaman bambu di atas dudukan</p>
@@ -602,7 +602,7 @@
 
                 <!-- Foto 17 (Baru) -->
                 <figure data-category="bambu" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20261102-WA0044.jpg" data-lightbox-title="Seni Potret Berbingkai Bilah Bambu">
-                    <img src="IMG-20261102-WA0044.jpg" alt="Seni Potret Berbingkai Bilah Bambu" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
+                    <img src="IMG-20261102-WA0044.jpg" alt="Seni Potret Berbingkai Bilah Bambu" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Potret Seni Bingkai Bambu</p>
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Karya potret karakter dengan bingkai bambu</p>
@@ -611,7 +611,7 @@
 
                 <!-- Foto 18 (Baru) -->
                 <figure data-category="ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden group cursor-pointer flex flex-col justify-between" data-lightbox-src="IMG-20260726-WA0038.jpg" data-lightbox-title="Ukiran Kayu Motif Elang & Papan Nama Berukir">
-                    <img src="IMG-20260726-WA0038.jpg" alt="Ukiran Kayu Motif Elang & Papan Nama Berukir" loading="lazy" class="gallery-media group-hover:scale-105 transition duration-500">
+                    <img src="IMG-20260726-WA0038.jpg" alt="Ukiran Kayu Motif Elang & Papan Nama Berukir" class="gallery-media group-hover:scale-105 transition duration-500">
                     <figcaption class="p-4">
                         <p class="text-amber-300 font-semibold text-sm">Ukiran Kayu Elang & Papan</p>
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Pahatan kayu artistik dengan tulisan berukir</p>
@@ -878,18 +878,32 @@
                 if (source) source.addEventListener('error', showFallback);
             });
 
-            // Penanganan error pemuatan foto galeri + tautan cek file langsung
+            // Penanganan pemuatan foto galeri + coba variasi ekstensi/huruf jika gagal + tautan cek langsung
             document.querySelectorAll('figure[data-lightbox-src] img').forEach((img) => {
                 const figureEl = img.closest('figure');
-                const srcFile = figureEl ? (figureEl.getAttribute('data-lightbox-src') || '') : '';
+                const originalSrc = figureEl ? (figureEl.getAttribute('data-lightbox-src') || '') : '';
+                const dotIdx = originalSrc.lastIndexOf('.');
+                const baseName = dotIdx > -1 ? originalSrc.slice(0, dotIdx) : originalSrc;
+                const ext = dotIdx > -1 ? originalSrc.slice(dotIdx) : '';
+                const extVariants = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG', ext.toLowerCase(), ext.toUpperCase()];
+                const candidates = [
+                    ...extVariants.map((e) => `${baseName}${e}`),
+                    ...extVariants.map((e) => `${baseName.toLowerCase()}${e}`)
+                ].filter((v, i, arr) => v && v !== originalSrc && arr.indexOf(v) === i);
+
+                let tryIdx = 0;
                 img.addEventListener('error', () => {
+                    if (tryIdx < candidates.length) {
+                        img.src = candidates[tryIdx++];
+                        return;
+                    }
                     img.style.display = 'none';
                     const caption = figureEl ? figureEl.querySelector('figcaption') : null;
-                    if (caption && srcFile && !caption.querySelector('[data-img-fallback]')) {
+                    if (caption && originalSrc && !caption.querySelector('[data-img-fallback]')) {
                         const box = document.createElement('div');
                         box.setAttribute('data-img-fallback', '1');
                         box.className = 'text-amber-300/90 text-[11px] mt-1.5 space-y-1';
-                        box.innerHTML = `<p>File <code class="text-amber-400">${srcFile}</code> belum ditemukan sejajar dengan <code class="text-amber-400">index.html</code>.</p><a href="${srcFile}" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Cek URL file langsung</a>`;
+                        box.innerHTML = `<p>File <code class="text-amber-400">${originalSrc}</code> belum ditemukan sejajar dengan <code class="text-amber-400">index.html</code>.</p><a href="${originalSrc}" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Cek URL file langsung</a>`;
                         caption.appendChild(box);
                     }
                 });
@@ -925,7 +939,11 @@
             document.querySelectorAll('figure[data-lightbox-src]').forEach((item) => {
                 item.addEventListener('click', () => {
                     if (!modal || !modalImg || !modalTitle) return;
-                    modalImg.src = item.getAttribute('data-lightbox-src') || '';
+                    const thumbImg = item.querySelector('img');
+                    const resolvedSrc = (thumbImg && thumbImg.style.display !== 'none' && thumbImg.getAttribute('src'))
+                        ? thumbImg.getAttribute('src')
+                        : (item.getAttribute('data-lightbox-src') || '');
+                    modalImg.src = resolvedSrc;
                     const title = item.getAttribute('data-lightbox-title') || '';
                     modalImg.alt = title;
                     modalTitle.textContent = title;
