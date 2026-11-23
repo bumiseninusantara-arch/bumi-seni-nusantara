@@ -451,11 +451,11 @@
                     </div>
                 </div>
 
-                <!-- Video 4 (video_1.mp4) -->
+                <!-- Video 4 (naga.jpg.mp4) -->
                 <div data-category="video ukiran" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
-                        <video controls preload="metadata" playsinline class="gallery-media bg-black">
-                            <source src="video_1.mp4" type="video/mp4">
+                        <video controls preload="metadata" playsinline data-alt-sources="naga.mp4,video_1.mp4" class="gallery-media bg-black">
+                            <source src="naga.jpg.mp4" type="video/mp4">
                             Browser Anda tidak mendukung pemutaran video.
                         </video>
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proses</span>
@@ -464,17 +464,17 @@
                         <p class="text-amber-300 font-semibold text-sm">Pengerjaan Ukiran Motif Naga</p>
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Proses pahat & perapihan ukiran kayu di bengkel</p>
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
-                            <p>Pastikan file <code class="text-amber-400">video_1.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
-                            <a href="video_1.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
+                            <p>Pastikan file <code class="text-amber-400">naga.jpg.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
+                            <a href="naga.jpg.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Video 5 (video_2.mp4) -->
+                <!-- Video 5 (taman.jpg.mp4) -->
                 <div data-category="video" class="gallery-item architectural-card rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="relative">
-                        <video controls preload="metadata" playsinline class="gallery-media bg-black">
-                            <source src="video_2.mp4" type="video/mp4">
+                        <video controls preload="metadata" playsinline data-alt-sources="taman.mp4,video_2.mp4" class="gallery-media bg-black">
+                            <source src="taman.jpg.mp4" type="video/mp4">
                             Browser Anda tidak mendukung pemutaran video.
                         </video>
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proyek</span>
@@ -483,8 +483,8 @@
                         <p class="text-amber-300 font-semibold text-sm">Taman Air Terjun & Bebatuan</p>
                         <p class="text-neutral-400 text-xs font-light mt-0.5">Penataan landscape, aliran air & tanaman hias</p>
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
-                            <p>Pastikan file <code class="text-amber-400">video_2.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
-                            <a href="video_2.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
+                            <p>Pastikan file <code class="text-amber-400">taman.jpg.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
+                            <a href="taman.jpg.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
                         </div>
                     </div>
                 </div>
@@ -856,16 +856,30 @@
                 });
             });
 
-            // Penanganan error pemutaran video
+            // Penanganan error & fallback nama alternatif pemutaran video
             document.querySelectorAll('video').forEach((vid) => {
                 const source = vid.querySelector('source');
                 const cardEl = vid.closest('.architectural-card');
                 const fallbackEl = cardEl ? cardEl.querySelector('[data-video-fallback]') : null;
-                const showFallback = () => {
+                const altList = (vid.getAttribute('data-alt-sources') || '').split(',').map((s) => s.trim()).filter(Boolean);
+                let altIdx = 0;
+
+                const handleVideoError = () => {
+                    if (altIdx < altList.length) {
+                        const nextSrc = altList[altIdx++];
+                        if (source) {
+                            source.src = nextSrc;
+                            vid.load();
+                        } else {
+                            vid.src = nextSrc;
+                        }
+                        return;
+                    }
                     if (fallbackEl) fallbackEl.classList.remove('hidden');
                 };
-                vid.addEventListener('error', showFallback);
-                if (source) source.addEventListener('error', showFallback);
+
+                vid.addEventListener('error', handleVideoError);
+                if (source) source.addEventListener('error', handleVideoError);
             });
 
             // Penanganan error pemuatan foto galeri + tautan cek file langsung
