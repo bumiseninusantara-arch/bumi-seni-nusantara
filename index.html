@@ -12,6 +12,32 @@
     <meta property="og:title" content="Bumi Seni Nusantara - Crafting Nature Into Timeless Beauty">
     <meta property="og:description" content="Studio kreatif profesional spesialis konstruksi bambu, furnitur eksklusif, seni rupa, dan landscape di Garut, Jawa Barat & sekitarnya, serta luar daerah.">
     <meta property="og:image" content="Logo BSN.jpg">
+
+    <!-- Structured Data (JSON-LD) untuk SEO Lokal -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Bumi Seni Nusantara",
+        "slogan": "Crafting Nature Into Timeless Beauty",
+        "description": "Studio kreatif spesialis konstruksi bambu, furnitur bambu, seni & ukiran artistik, kerajinan bambu, serta landscape di Garut, Jawa Barat & sekitarnya, serta luar daerah.",
+        "email": "bumiseninusantara@gmail.com",
+        "telephone": "+628132207215",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Garut",
+            "addressRegion": "Jawa Barat",
+            "addressCountry": "ID"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Garut" },
+            { "@type": "AdministrativeArea", "name": "Jawa Barat" },
+            { "@type": "Country", "name": "Indonesia" }
+        ],
+        "openingHours": "Mo-Sa 08:00-17:00"
+    }
+    </script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -130,14 +156,14 @@
                 </div>
             </a>
 
-            <nav class="flex space-x-6 text-sm font-medium text-neutral-300">
+            <nav class="flex space-x-5 text-sm font-medium text-neutral-300">
                 <a href="#beranda" class="hover:text-amber-400 transition">Beranda</a>
                 <a href="#tentang" class="hover:text-amber-400 transition">Tentang Kami</a>
-                <a href="#visi-misi" class="hover:text-amber-400 transition">Visi Misi</a>
                 <a href="#layanan" class="hover:text-amber-400 transition">Layanan</a>
                 <a href="#galeri" class="hover:text-amber-400 transition">Galeri</a>
                 <a href="#mengapa" class="hover:text-amber-400 transition">Mengapa Kami</a>
                 <a href="#alur-kerja" class="hover:text-amber-400 transition">Alur Kerja</a>
+                <a href="#faq" class="hover:text-amber-400 transition">FAQ</a>
                 <a href="#kontak" class="hover:text-amber-400 transition">Kontak</a>
             </nav>
         </div>
@@ -385,7 +411,7 @@
         </div>
     </section>
 
-    <!-- Galeri Karya & Proses Pengerjaan (3 Video & 15 Foto Berdampingan + Filter Kategori) -->
+    <!-- Galeri Karya & Proses Pengerjaan (3 Video & 15 Foto Berdampingan + Filter Kategori + Lightbox Video/Foto) -->
     <section id="galeri" class="py-36 bg-neutral-900/30 border-t border-amber-900/30 px-8 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
@@ -414,8 +440,13 @@
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proses</span>
                     </div>
                     <div class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Pembentukan & Pemotongan Kayu</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Tahap awal pembentukan & perapihan di workshop</p>
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <p class="text-amber-300 font-semibold text-sm">Pembentukan & Pemotongan Kayu</p>
+                                <p class="text-neutral-400 text-xs font-light mt-0.5">Tahap awal pembentukan & perapihan di workshop</p>
+                            </div>
+                            <button type="button" data-expand-video="VID-20261102-WA0074.mp4" data-video-title="Pembentukan & Pemotongan Kayu" class="shrink-0 px-2.5 py-1 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-amber-600/40 text-amber-300 text-[11px] font-semibold transition cursor-pointer">Perbesar</button>
+                        </div>
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
                             <p>Pastikan file <code class="text-amber-400">VID-20261102-WA0074.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
                             <a href="VID-20261102-WA0074.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
@@ -433,8 +464,13 @@
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proses</span>
                     </div>
                     <div class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Proses Detail Ukiran Artistik</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Pengerjaan motif, lekukan & tekstur di bengkel</p>
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <p class="text-amber-300 font-semibold text-sm">Proses Detail Ukiran Artistik</p>
+                                <p class="text-neutral-400 text-xs font-light mt-0.5">Pengerjaan motif, lekukan & tekstur di bengkel</p>
+                            </div>
+                            <button type="button" data-expand-video="VID-20261102-WA0076.mp4" data-video-title="Proses Detail Ukiran Artistik" class="shrink-0 px-2.5 py-1 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-amber-600/40 text-amber-300 text-[11px] font-semibold transition cursor-pointer">Perbesar</button>
+                        </div>
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
                             <p>Pastikan file <code class="text-amber-400">VID-20261102-WA0076.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
                             <a href="VID-20261102-WA0076.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
@@ -452,8 +488,13 @@
                         <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-500/90 text-neutral-950 text-[10px] font-extrabold tracking-wider uppercase shadow">Video Proyek</span>
                     </div>
                     <div class="p-4">
-                        <p class="text-amber-300 font-semibold text-sm">Landscape, Kolam & Patung Satwa</p>
-                        <p class="text-neutral-400 text-xs font-light mt-0.5">Elemen air, batu artifisial & patung satwa</p>
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <p class="text-amber-300 font-semibold text-sm">Landscape, Kolam & Patung Satwa</p>
+                                <p class="text-neutral-400 text-xs font-light mt-0.5">Elemen air, batu artifisial & patung satwa</p>
+                            </div>
+                            <button type="button" data-expand-video="VID-20260726-WA0053.mp4" data-video-title="Landscape, Kolam & Patung Satwa" class="shrink-0 px-2.5 py-1 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-amber-600/40 text-amber-300 text-[11px] font-semibold transition cursor-pointer">Perbesar</button>
+                        </div>
                         <div data-video-fallback class="hidden text-amber-300/90 text-[11px] mt-1.5 space-y-1">
                             <p>Pastikan file <code class="text-amber-400">VID-20260726-WA0053.mp4</code> diunggah sejajar dengan <code class="text-amber-400">index.html</code>.</p>
                             <a href="VID-20260726-WA0053.mp4" target="_blank" rel="noopener noreferrer" class="inline-block underline text-amber-400">Buka file video langsung</a>
@@ -596,6 +637,10 @@
                     </figcaption>
                 </figure>
             </div>
+
+            <div id="emptyGalleryMsg" class="hidden architectural-card rounded-3xl p-10 text-center mt-8">
+                <p class="text-amber-300 font-semibold text-base">Belum ada karya yang tampil pada kategori ini.</p>
+            </div>
         </div>
     </section>
 
@@ -713,6 +758,37 @@
         </div>
     </section>
 
+    <!-- FAQ Singkat Calon Klien -->
+    <section id="faq" class="py-32 bg-[#030303] border-t border-amber-900/30 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 text-xs font-bold tracking-[0.3em] uppercase block mb-3">Informasi Penting</span>
+                <h2 class="text-5xl font-black text-white mb-4 tracking-tight">Pertanyaan yang Sering Diajukan</h2>
+                <div class="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-6 shadow-lg shadow-amber-500/50"></div>
+                <p class="text-neutral-400 text-lg font-light max-w-2xl mx-auto">Gambaran singkat sebelum Anda memulai diskusi proyek bersama tim Bumi Seni Nusantara.</p>
+            </div>
+
+            <div class="desktop-grid-2">
+                <div class="architectural-card p-8 rounded-3xl">
+                    <h3 class="text-lg font-bold text-amber-400 mb-2">Apakah bisa pesan ukuran, bentuk, atau tema custom?</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Bisa. Setiap proyek kami sesuaikan dengan ukuran area, fungsi ruang, serta nuansa kawasan—baik untuk resort, hotel, villa, café, wisata, maupun hunian.</p>
+                </div>
+                <div class="architectural-card p-8 rounded-3xl">
+                    <h3 class="text-lg font-bold text-amber-400 mb-2">Apakah melayani proyek di luar Garut dan Jawa Barat?</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Ya. Basis kami di Garut, Jawa Barat & sekitarnya, dan kami juga melayani pengiriman serta pemasangan di luar daerah sesuai kesepakatan proyek.</p>
+                </div>
+                <div class="architectural-card p-8 rounded-3xl">
+                    <h3 class="text-lg font-bold text-amber-400 mb-2">Bagaimana cara meminta estimasi atau penawaran?</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Anda bisa mengisi form konsultasi di bawah atau menghubungi WhatsApp/email dengan menyertakan jenis karya, perkiraan ukuran, dan lokasi proyek.</p>
+                </div>
+                <div class="architectural-card p-8 rounded-3xl">
+                    <h3 class="text-lg font-bold text-amber-400 mb-2">Material apa saja yang biasa dikerjakan?</h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">Kami mengolah bambu struktural & anyaman, kayu/akar ukir, elemen dekorasi artistik, serta penataan taman/landscape dan elemen air pendukung ruang.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer / Kontak & Form Konsultasi Cepat -->
     <footer id="kontak" class="bg-[#030303] border-t border-amber-900/40 pt-36 pb-44 px-8 text-center relative overflow-hidden">
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-amber-600/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -753,7 +829,26 @@
                     </div>
                     <div>
                         <label for="clientLocation" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Lokasi Proyek / Kota</label>
-                        <input id="clientLocation" type="text" placeholder="Contoh: Garut / Bandung / Luar Daerah" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
+                        <input id="clientLocation" type="text" placeholder="Contoh: Garut / Jawa Barat / Luar Daerah" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400">
+                    </div>
+                </div>
+                <div class="desktop-grid-2" style="gap: 1.25rem;">
+                    <div>
+                        <label for="clientSegment" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Kategori Klien / Ruang</label>
+                        <select id="clientSegment" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white focus:outline-none focus:border-amber-400">
+                            <option value="Resort / Hotel / Villa">Resort / Hotel / Villa</option>
+                            <option value="Restoran / Café / Kawasan Wisata">Restoran / Café / Kawasan Wisata</option>
+                            <option value="Hunian / Taman Pribadi">Hunian / Taman Pribadi</option>
+                            <option value="Instansi / Perusahaan / Ruang Publik">Instansi / Perusahaan / Ruang Publik</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="projectStage" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">Tahap Rencana</label>
+                        <select id="projectStage" class="w-full px-4 py-3 rounded-2xl bg-neutral-900/90 border border-amber-700/40 text-white focus:outline-none focus:border-amber-400">
+                            <option value="Konsultasi & Konsep Awal">Konsultasi & Konsep Awal</option>
+                            <option value="Permintaan Estimasi / Penawaran">Permintaan Estimasi / Penawaran</option>
+                            <option value="Lokasi Siap & Rencana Pengerjaan">Lokasi Siap & Rencana Pengerjaan</option>
+                        </select>
                     </div>
                 </div>
                 <div>
@@ -820,11 +915,12 @@
         </div>
     </footer>
 
-    <!-- Modal Lightbox Foto -->
+    <!-- Modal Lightbox Foto & Video -->
     <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
         <div class="relative max-w-4xl w-full architectural-card rounded-3xl p-6">
-            <button id="closeLightboxBtn" type="button" aria-label="Tutup pratinjau foto" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-neutral-900/90 border border-amber-500/50 text-amber-400 hover:bg-neutral-800 flex items-center justify-center text-xl font-bold cursor-pointer">&times;</button>
-            <img id="lightboxImg" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-2xl bg-black mx-auto">
+            <button id="closeLightboxBtn" type="button" aria-label="Tutup pratinjau media" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-neutral-900/90 border border-amber-500/50 text-amber-400 hover:bg-neutral-800 flex items-center justify-center text-xl font-bold cursor-pointer">&times;</button>
+            <img id="lightboxImg" src="" alt="" class="hidden w-full max-h-[75vh] object-contain rounded-2xl bg-black mx-auto">
+            <video id="lightboxVideo" controls playsinline class="hidden w-full max-h-[75vh] rounded-2xl bg-black mx-auto"></video>
             <p id="lightboxTitle" class="text-center text-amber-300 font-semibold text-base mt-4"></p>
         </div>
     </div>
@@ -873,9 +969,10 @@
                 });
             });
 
-            // Filter kategori galeri
+            // Filter kategori galeri + pesan kosong bila tidak ada item
             const filterButtons = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
+            const emptyMsg = document.getElementById('emptyGalleryMsg');
 
             filterButtons.forEach((btn) => {
                 btn.addEventListener('click', () => {
@@ -883,37 +980,88 @@
                     filterButtons.forEach((b) => b.classList.remove('active'));
                     btn.classList.add('active');
 
+                    let visibleCount = 0;
                     galleryItems.forEach((item) => {
                         const cats = (item.getAttribute('data-category') || '').split(/\s+/);
                         if (selected === 'all' || cats.includes(selected)) {
                             item.style.display = '';
+                            visibleCount += 1;
                         } else {
                             item.style.display = 'none';
                         }
                     });
+
+                    if (emptyMsg) {
+                        emptyMsg.classList.toggle('hidden', visibleCount > 0);
+                    }
                 });
             });
 
-            // Lightbox untuk melihat foto lebih besar
+            // Lightbox untuk melihat foto atau video lebih besar
             const modal = document.getElementById('lightboxModal');
             const modalImg = document.getElementById('lightboxImg');
+            const modalVideo = document.getElementById('lightboxVideo');
             const modalTitle = document.getElementById('lightboxTitle');
             const closeModalBtn = document.getElementById('closeLightboxBtn');
 
+            function openImageModal(src, title) {
+                if (!modal || !modalImg || !modalVideo || !modalTitle) return;
+                modalVideo.pause();
+                modalVideo.removeAttribute('src');
+                modalVideo.classList.add('hidden');
+
+                modalImg.src = src;
+                modalImg.alt = title;
+                modalImg.classList.remove('hidden');
+
+                modalTitle.textContent = title;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
+            function openVideoModal(src, title) {
+                if (!modal || !modalImg || !modalVideo || !modalTitle) return;
+                modalImg.classList.add('hidden');
+                modalImg.src = '';
+
+                modalVideo.src = src;
+                modalVideo.classList.remove('hidden');
+                modalVideo.load();
+
+                modalTitle.textContent = title;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
             document.querySelectorAll('figure[data-lightbox-src]').forEach((item) => {
                 item.addEventListener('click', () => {
-                    if (!modal || !modalImg || !modalTitle) return;
-                    modalImg.src = item.getAttribute('data-lightbox-src') || '';
-                    const title = item.getAttribute('data-lightbox-title') || '';
-                    modalImg.alt = title;
-                    modalTitle.textContent = title;
-                    modal.classList.remove('hidden');
-                    modal.classList.add('flex');
+                    openImageModal(
+                        item.getAttribute('data-lightbox-src') || '',
+                        item.getAttribute('data-lightbox-title') || ''
+                    );
+                });
+            });
+
+            document.querySelectorAll('button[data-expand-video]').forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openVideoModal(
+                        btn.getAttribute('data-expand-video') || '',
+                        btn.getAttribute('data-video-title') || ''
+                    );
                 });
             });
 
             function closeModal() {
                 if (!modal) return;
+                if (modalVideo) {
+                    modalVideo.pause();
+                    modalVideo.removeAttribute('src');
+                    modalVideo.classList.add('hidden');
+                }
+                if (modalImg) {
+                    modalImg.classList.add('hidden');
+                }
                 modal.classList.add('hidden');
                 modal.classList.remove('flex');
             }
@@ -935,6 +1083,8 @@
                     e.preventDefault();
                     const name = (document.getElementById('clientName')?.value || '').trim();
                     const location = (document.getElementById('clientLocation')?.value || '').trim();
+                    const segment = (document.getElementById('clientSegment')?.value || '').trim();
+                    const stage = (document.getElementById('projectStage')?.value || '').trim();
                     const service = (document.getElementById('projectService')?.value || '').trim();
                     const notes = (document.getElementById('projectNotes')?.value || '').trim();
 
@@ -942,6 +1092,8 @@
                         'Halo Bumi Seni Nusantara, saya ingin berkonsultasi mengenai proyek:',
                         `• Nama: ${name || '-'}`,
                         `• Lokasi Proyek: ${location || '-'}`,
+                        `• Kategori Klien/Ruang: ${segment || '-'}`,
+                        `• Tahap Rencana: ${stage || '-'}`,
                         `• Layanan: ${service}`,
                         `• Catatan: ${notes || '-'}`
                     ];
